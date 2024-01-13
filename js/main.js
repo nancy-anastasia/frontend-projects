@@ -16,10 +16,7 @@ var textSpans; // Span elements of characters outputted on the page
 var inputtedValue; // The value that a user type in the input field
 var typeCount; // How many times a user has typed in the field
 var typedChars; // A variable for an empty array container for typed characters
-var allTypedChars; // A variable for containing an array of objects with correct characters
 var correctlyTypedChars; // A variable for an empty array container for correctly typed characters
-var grossTypedWordCount; // How many words were typed by the user in total
-var netTypedWordCount; // How many words were typed correctly
 var grossWMP; // How many words were typed by the user in total per minute
 var netWPM; // // How many words were typed per minute correctly per minute
 var accuracyRate; // What percent of characters was typed correctly
@@ -36,14 +33,8 @@ var errorsElem; // An element for outputting the number of errors
 // Initialize global variables and event handlers
 function init() {
   // References to the text options
-  swedishOptions = document
-    .getElementById("chosen-text-title")
-    .getElementsByClassName("swedish");
-  console.log(swedishOptions);
-  englishOptions = document
-    .getElementById("chosen-text-title")
-    .getElementsByClassName("english");
-  console.log(swedishOptions);
+  swedishOptions = document.getElementById("chosen-text-title").getElementsByClassName("swedish");
+  englishOptions = document.getElementById("chosen-text-title").getElementsByClassName("english");
 
   // Get data from the xml file ("xmlFile") and an array of titles ("titles")
   fetchData();
@@ -117,8 +108,6 @@ function fetchData() {
       const parser = new DOMParser();
       xmlData = parser.parseFromString(str, "text/xml");
       titles = xmlData.getElementsByTagName("title");
-      console.log(xmlData);
-      console.log(titles);
       // Continue working with the parsed file
     })
     // Catch an eventual error with the fetch operation
@@ -133,10 +122,8 @@ function fetchData() {
 function handleCasingCheckChange() {
   if (ignoreCasingCheckbox.checked === true) {
     casingIsChecked = false;
-    console.log("Casing is not checked");
   } else if (ignoreCasingCheckbox.checked === false) {
     casingIsChecked = true;
-    console.log("Casing is checked");
   }
 }
 // End of handleCasingCheckChange() function
@@ -146,7 +133,6 @@ function handleCasingCheckChange() {
 function handleTextTitleChange() {
   // Extract the chosen text title from the dropdown
   chosenTextTitle = this.value;
-  console.log("Selected text:", chosenTextTitle);
 
   // Loop over titles to find needed data
   for (let i = 0; i < titles.length; i++) {
@@ -155,12 +141,7 @@ function handleTextTitleChange() {
     if (title === chosenTextTitle) {
       // chosenTextTitle = title;
       chosenTextAuthor = titles[i].nextElementSibling.textContent;
-      chosenText =
-        titles[i].nextElementSibling.nextElementSibling.nextElementSibling
-          .textContent;
-      console.log("Chosen Text Title:", chosenTextTitle);
-      console.log("Chosen Text Author:", chosenTextAuthor);
-      console.log("Chosen Text:", chosenText);
+      chosenText = titles[i].nextElementSibling.nextElementSibling.nextElementSibling.textContent;
     }
   }
   updateDisplayedText();
@@ -180,18 +161,11 @@ function updateDisplayedText() {
   // Count the amount of words and characters in the text
   // Count the amount of words
   // The first .replace - exclude  start and end white-space, the second .replace - make 2 or more spaces to 1, the third .replace - exclude newline with a start spacing. To filter out empty strings: .filter(function(str){return str!="";})
-  let wordCount = chosenText
-    .replace(/(^\s*)|(\s*$)/gi, "")
-    .replace(/[ ]{2,}/gi, " ")
-    .replace(/\n /, "\n")
-    .split(" ")
-    .filter(function (str) {
-      return str != "";
-    }).length;
-  console.log("wordCount :", wordCount);
+  let wordCount = chosenText.replace(/(^\s*)|(\s*$)/gi, "").replace(/[ ]{2,}/gi, " ").replace(/\n /, "\n").split(" ").filter(function (str) {
+    return str != "";
+  }).length;
   // Count the total amount of characters in the text
   let characterCount = chosenText.length;
-  console.log("characterCount :", characterCount);
 
   // Call the function to save the text as an array of <span> elements
   makeTextSpanArray();
@@ -216,7 +190,6 @@ function makeTextSpanArray() {
     let elem = `<span>${char}</span>`;
     textArray.push(elem);
   }
-  console.log(textArray);
 }
 // End of the makeTextSpanArray() function
 // --------------------------------------------------
@@ -226,7 +199,6 @@ function handleLanguageChange() {
   let selectedLanguage = document.querySelector(
     'input[name="language"]:checked'
   ).value;
-  console.log("selectedLanguage: ", selectedLanguage);
   // Update options' visibility based on the selected language
   if (selectedLanguage === "swedish") {
     for (let i = 0; i < swedishOptions.length; i++) {
@@ -264,16 +236,7 @@ function handleLanguageChange() {
   textDropdown.dispatchEvent(event);
 
   // Statistics must be 0
-  if (
-    grossTypedWordCount !== 0 ||
-    netTypedWordCount !== 0 ||
-    grossWMP !== 0 ||
-    netWPM !== 0 ||
-    accuracyRate !== 0 ||
-    errorCount !== 0
-  ) {
-    grossTypedWordCount = 0;
-    netTypedWordCount = 0;
+  if (grossWMP !== 0 || netWPM !== 0 || accuracyRate !== 0 || errorCount !== 0) {
     grossWMP = 0;
     netWPM = 0;
     accuracyRate = 0;
@@ -285,208 +248,178 @@ function handleLanguageChange() {
     errorsElem.innerText = 0;
   }
 }
-  // End of the handleLanguageChange() function
-  // --------------------------------------------------
+// End of the handleLanguageChange() function
+// --------------------------------------------------
 
-  // Start the game
-  function startGame() {
-    console.log("Game started");
-    // Empty the text input field
-    let textInputField = document.getElementById("text-input-field");
-    textInputField.value = '';
-    textInputField.placeholder = "Type here...";
-    // Show the stop button
-    if (stopButton.classList.contains("invisible")) {
-      stopButton.classList.remove("invisible");
-      playButton.classList.add("invisible");
-    }
-    // Disable the checkbox for casing check
-    ignoreCasingCheckbox.disabled = true;
-    // Disable radio buttons
-    let radioButtons = document.querySelectorAll('input[name="language"]');
-    radioButtons.forEach(function (radioButton) {
-      radioButton.disabled = true;
-    });
-    // Disbale the dropdown
-    textDropdown.disabled = true;
-    // Add an event listener for when a user is typing in the input field
-    document
-      .getElementById("text-input-field")
-      .addEventListener("input", handleUserTextInput);
-    textSpans = document.querySelectorAll("#display-chosen-text span");
-    console.log(textSpans);
-    typeCount = 0;
+// Start the game
+function startGame() {
+  // Empty the text input field
+  let textInputField = document.getElementById("text-input-field");
+  textInputField.value = "";
+  textInputField.placeholder = "Type here...";
+  // Show the stop button
+  if (stopButton.classList.contains("invisible")) {
+    stopButton.classList.remove("invisible");
+    playButton.classList.add("invisible");
+  }
+  // Disable the checkbox for casing check
+  ignoreCasingCheckbox.disabled = true;
+  // Disable radio buttons
+  let radioButtons = document.querySelectorAll('input[name="language"]');
+  radioButtons.forEach(function (radioButton) {
+    radioButton.disabled = true;
+  });
+  // Disbale the dropdown
+  textDropdown.disabled = true;
+  // Add an event listener for when a user is typing in the input field
+  document.getElementById("text-input-field").addEventListener("input", handleUserTextInput);
+  textSpans = document.querySelectorAll("#display-chosen-text span");
+  // Put the number on inputted characters to 0
+  typeCount = 0;
 
-    // Clear the displayed text field and remove all classes from the spans
-    for (let i = 0; i < textSpans.length; i++) {
-      if (
-        textSpans[i].classList.contains("infocus") ||
-        textSpans[i].classList.contains("correctly-typed") ||
-        textSpans[i].classList.contains("incorrectly-typed")
-      ) {
-        while (textSpans[i].classList.length > 0) {
-          textSpans[i].classList.remove(textSpans[i].classList.item(0));
-        }
-      }
-    }
-    // Highlight what symbol to start typing with
-    textSpans[typeCount].classList.add("infocus");
-    // Statistics must be 0
+  // Clear the displayed text field and remove all classes from the spans
+  for (let i = 0; i < textSpans.length; i++) {
     if (
-      grossTypedWordCount !== 0 ||
-      netTypedWordCount !== 0 ||
-      grossWMP !== 0 ||
-      netWPM !== 0 ||
-      accuracyRate !== 0 ||
-      errorCount !== 0
+      textSpans[i].classList.contains("infocus") ||
+      textSpans[i].classList.contains("correctly-typed") ||
+      textSpans[i].classList.contains("incorrectly-typed")
     ) {
-      grossTypedWordCount = 0;
-      netTypedWordCount = 0;
-      grossWMP = 0;
-      netWPM = 0;
-      accuracyRate = 0;
-      errorCount = 0;
-      // Output zeros on the screen
-      grossWmpElem.innerText = 0;
-      netWmpElem.innerText = 0;
-      accuracyElem.innerText = 0;
-      errorsElem.innerText = 0;
-    }
-    // Initiate empty arrays for typed characters and correctly typed characters
-    typedChars = []; // An array for separate characters
-    correctlyTypedChars = [];
-    allTypedChars = []; // An array for objects
-    // Set a new game timer
-    startTime = new Date().getTime();
-  }
-  // End of the startGame() function
-  // --------------------------------------------------
-
-  // Stop the game
-  function stopGame() {
-    console.log("Game is over");
-    // Show the start button
-    if (playButton.classList.contains("invisible")) {
-      playButton.classList.remove("invisible");
-      stopButton.classList.add("invisible");
-    }
-    // Enable the checkbox for casing check
-    ignoreCasingCheckbox.disabled = false;
-    // Enable radio buttons
-    let radioButtons = document.querySelectorAll('input[name="language"]');
-    radioButtons.forEach(function (radioButton) {
-      radioButton.disabled = false;
-    });
-    // Enable the dropdown
-    textDropdown.disabled = false;
-    // Remove an event listener for typingfrom the input field
-    document
-      .getElementById("text-input-field")
-      .removeEventListener("input", handleUserTextInput);
-  }
-  // End of the stopGame() function
-  // --------------------------------------------------
-
-  // Handle a text input made by a user
-  function handleUserTextInput(event) {
-    typeCount++;
-    // Highlight what symbol to type next
-    textSpans[typeCount].classList.add("infocus");
-    console.log("typeCount in handleUserTextInput: ", typeCount);
-    console.log(event.target.value);
-    // Save the inputted character in a variable
-    inputtedValue = event.target.value;
-    // Leave only one character
-    if (inputtedValue.length > 1) {
-      inputtedValue = inputtedValue[inputtedValue.length - 1];
-    }
-    console.log("inputtedValue in handleUserTextInput: ", inputtedValue);
-    // Clear the input field after a backspace (after a word)
-    if (inputtedValue === " ") {
-      event.target.value = "";
-    }
-    checkInputtedValue();
-  }
-  // End of the handleUserTextInput(event) function
-  // --------------------------------------------------
-
-  // Check the inputted value
-  function checkInputtedValue() {
-    let index = typeCount - 1;
-    // Save the typed value into an array
-    typedChars.push(inputtedValue);
-    let valueObject = {};
-    if (casingIsChecked === true) {
-      if (textSpans[index].textContent === inputtedValue) {
-        console.log("correct");
-        valueObject[index] = "correct";
-        valueObject["value"] = inputtedValue;
-        correctlyTypedChars.push(inputtedValue);
-        if (textSpans[index].classList.contains("infocus")) {
-          textSpans[index].classList.remove("infocus");
-          textSpans[index].classList.add("correctly-typed");
-        }
-      } else {
-        console.log("incorrect");
-        errorCount++;
-        valueObject[index] = "incorrect";
-        valueObject["value"] = inputtedValue;
-        if (textSpans[index].classList.contains("infocus")) {
-          textSpans[index].classList.remove("infocus");
-          textSpans[index].classList.add("incorrectly-typed");
-        }
-      }
-    } else if (casingIsChecked === false) {
-      if (
-        textSpans[index].textContent.toLowerCase() === inputtedValue.toLowerCase()
-      ) {
-        console.log("correct");
-        valueObject[index] = "correct";
-        valueObject["value"] = inputtedValue;
-        if (textSpans[index].classList.contains("infocus")) {
-          textSpans[index].classList.remove("infocus");
-          textSpans[index].classList.add("correctly-typed");
-        }
-      } else {
-        console.log("incorrect");
-        errorCount++;
-        valueObject[index] = "incorrect";
-        valueObject["value"] = inputtedValue;
-        if (textSpans[index].classList.contains("infocus")) {
-          textSpans[index].classList.remove("infocus");
-          textSpans[index].classList.add("incorrectly-typed");
-        }
+      while (textSpans[i].classList.length > 0) {
+        textSpans[i].classList.remove(textSpans[i].classList.item(0));
       }
     }
-    // Save the value in an object
-    allTypedChars.push(valueObject);
-    console.log("allTypedChars: ", allTypedChars);
-    undateStatistics();
   }
-  // End of the checkInputtedValue() function
-  // --------------------------------------------------
-
-  // Update statistics on the screen
-  function undateStatistics() {
-    // Calculate the time elapsed from the beginning of the game
-    const currentTime = new Date().getTime(); // Current time in milliseconds
-    const elapsedTime = (currentTime - startTime) / 60000; // Converting time to minutes
-    console.log(elapsedTime);
-
-    // Calculate and output accuracy rate
-    accuracyRate = (correctlyTypedChars.length / typedChars.length).toFixed(2);
-    accuracyElem.innerText = accuracyRate;
-
-    // Output error count
-    errorsElem.innerText = errorCount;
-
-    // Calculate the WMPs and output them on the page
-    grossWMP = Math.round((typedChars.length / 5) / elapsedTime);
-    netWPM = Math.round(grossWMP - (errorCount / elapsedTime));
-    grossWmpElem.innerText = grossWMP;
-    netWmpElem.innerText = netWPM;
-
-
-    // End of the undateStatistics() function
-    // -------------------------------------------------
+  // Highlight what symbol to start typing with
+  textSpans[typeCount].classList.add("infocus");
+  // Put statistics to 0
+  if (grossWMP !== 0 || netWPM !== 0 || accuracyRate !== 0 || errorCount !== 0) {
+    grossWMP = 0;
+    netWPM = 0;
+    accuracyRate = 0;
+    errorCount = 0;
+    // Output zeros on the screen
+    grossWmpElem.innerText = 0;
+    netWmpElem.innerText = 0;
+    accuracyElem.innerText = 0;
+    errorsElem.innerText = 0;
   }
+  // Initiate empty arrays for typed characters and correctly typed characters
+  typedChars = []; // An array for separate characters
+  correctlyTypedChars = [];
+  // Set a new game timer
+  startTime = new Date().getTime();
+}
+// End of the startGame() function
+// --------------------------------------------------
+
+// Stop the game
+function stopGame() {
+  // Show the start button
+  if (playButton.classList.contains("invisible")) {
+    playButton.classList.remove("invisible");
+    stopButton.classList.add("invisible");
+  }
+  // Enable the checkbox for casing check
+  ignoreCasingCheckbox.disabled = false;
+  // Enable radio buttons
+  let radioButtons = document.querySelectorAll('input[name="language"]');
+  radioButtons.forEach(function (radioButton) {
+    radioButton.disabled = false;
+  });
+  // Enable the dropdown
+  textDropdown.disabled = false;
+  // Remove an event listener for typingfrom the input field
+  document.getElementById("text-input-field").removeEventListener("input", handleUserTextInput);
+}
+// End of the stopGame() function
+// --------------------------------------------------
+
+// Handle a text input made by a user
+function handleUserTextInput(event) {
+  typeCount++;
+  // Highlight what symbol to type next
+  textSpans[typeCount].classList.add("infocus");
+  // Save the inputted character in a variable
+  inputtedValue = event.target.value;
+  // Leave only one character
+  if (inputtedValue.length > 1) {
+    inputtedValue = inputtedValue[inputtedValue.length - 1];
+  }
+  // Clear the input field after a backspace (after a word)
+  if (inputtedValue === " ") {
+    event.target.value = "";
+  }
+  checkInputtedValue();
+}
+// End of the handleUserTextInput(event) function
+// --------------------------------------------------
+
+// Check the inputted value
+function checkInputtedValue() {
+  let index = typeCount - 1;
+  // Save the typed value into an array
+  typedChars.push(inputtedValue);
+  // Check if the character is correct
+  if (casingIsChecked === true) {
+    // If a character is correct
+    if (textSpans[index].textContent === inputtedValue) {
+      correctlyTypedChars.push(inputtedValue);
+      if (textSpans[index].classList.contains("infocus")) {
+        textSpans[index].classList.remove("infocus");
+        textSpans[index].classList.add("correctly-typed");
+      }
+      // If a character is incorrect
+    } else {
+      document.getElementById("errorSound").play();
+      errorCount++;
+      if (textSpans[index].classList.contains("infocus")) {
+        textSpans[index].classList.remove("infocus");
+        textSpans[index].classList.add("incorrectly-typed");
+      }
+    }
+  } else if (casingIsChecked === false) {
+    // If a character is correct
+    if (
+      textSpans[index].textContent.toLowerCase() === inputtedValue.toLowerCase()
+    ) {
+      correctlyTypedChars.push(inputtedValue);
+      if (textSpans[index].classList.contains("infocus")) {
+        textSpans[index].classList.remove("infocus");
+        textSpans[index].classList.add("correctly-typed");
+      }
+    } else {
+      document.getElementById("errorSound").play();
+      errorCount++;
+      if (textSpans[index].classList.contains("infocus")) {
+        textSpans[index].classList.remove("infocus");
+        textSpans[index].classList.add("incorrectly-typed");
+      }
+    }
+  }
+  undateStatistics();
+}
+// End of the checkInputtedValue() function
+// --------------------------------------------------
+
+// Update statistics on the screen
+function undateStatistics() {
+  // Calculate the time elapsed from the beginning of the game
+  const currentTime = new Date().getTime(); // Current time in milliseconds
+  const elapsedTime = (currentTime - startTime) / 60000; // Converting time to minutes
+
+  // Calculate and output accuracy rate
+  accuracyRate = (correctlyTypedChars.length / typedChars.length).toFixed(2);
+  accuracyElem.innerText = accuracyRate;
+
+  // Output error count
+  errorsElem.innerText = errorCount;
+
+  // Calculate the WMPs and output them on the page
+  grossWMP = Math.round(typedChars.length / 5 / elapsedTime);
+  netWPM = Math.round(grossWMP - errorCount / elapsedTime);
+  grossWmpElem.innerText = grossWMP;
+  netWmpElem.innerText = netWPM;
+
+  // End of the undateStatistics() function
+  // -------------------------------------------------
+}
