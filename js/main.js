@@ -94,7 +94,7 @@ window.addEventListener("load", init);
 // Fetch data from the XML file
 function fetchData() {
   // Retreive the XML file
-  fetch("http://127.0.0.1:5500/texts.xml")
+  fetch("https://studenter.miun.se/~naku2300/dt146g/project/texts.xml")
     .then((response) => {
       // If there is no response from the server
       if (!response.ok) {
@@ -108,7 +108,6 @@ function fetchData() {
       const parser = new DOMParser();
       xmlData = parser.parseFromString(str, "text/xml");
       titles = xmlData.getElementsByTagName("title");
-      // Continue working with the parsed file
     })
     // Catch an eventual error with the fetch operation
     .catch((error) => {
@@ -139,7 +138,7 @@ function handleTextTitleChange() {
     let title = titles[i].textContent;
     // When find the title of the chosen text
     if (title === chosenTextTitle) {
-      // chosenTextTitle = title;
+      // Retrieve the author name and text
       chosenTextAuthor = titles[i].nextElementSibling.textContent;
       chosenText = titles[i].nextElementSibling.nextElementSibling.nextElementSibling.textContent;
     }
@@ -271,9 +270,13 @@ function startGame() {
   });
   // Disbale the dropdown
   textDropdown.disabled = true;
+
   // Add an event listener for when a user is typing in the input field
   document.getElementById("text-input-field").addEventListener("input", handleUserTextInput);
+
+  // Select all spans in the text
   textSpans = document.querySelectorAll("#display-chosen-text span");
+
   // Put the number on inputted characters to 0
   typeCount = 0;
 
@@ -289,8 +292,10 @@ function startGame() {
       }
     }
   }
+
   // Highlight what symbol to start typing with
   textSpans[typeCount].classList.add("infocus");
+
   // Put statistics to 0
   if (grossWMP !== 0 || netWPM !== 0 || accuracyRate !== 0 || errorCount !== 0) {
     grossWMP = 0;
@@ -303,9 +308,11 @@ function startGame() {
     accuracyElem.innerText = 0;
     errorsElem.innerText = 0;
   }
+
   // Initiate empty arrays for typed characters and correctly typed characters
   typedChars = []; // An array for separate characters
   correctlyTypedChars = [];
+
   // Set a new game timer
   startTime = new Date().getTime();
 }
@@ -396,13 +403,13 @@ function checkInputtedValue() {
       }
     }
   }
-  undateStatistics();
+  updateStatistics();
 }
 // End of the checkInputtedValue() function
 // --------------------------------------------------
 
 // Update statistics on the screen
-function undateStatistics() {
+function updateStatistics() {
   // Calculate the time elapsed from the beginning of the game
   const currentTime = new Date().getTime(); // Current time in milliseconds
   const elapsedTime = (currentTime - startTime) / 60000; // Converting time to minutes
@@ -420,6 +427,6 @@ function undateStatistics() {
   grossWmpElem.innerText = grossWMP;
   netWmpElem.innerText = netWPM;
 
-  // End of the undateStatistics() function
-  // -------------------------------------------------
 }
+// End of the updateStatistics() function
+// -------------------------------------------------
