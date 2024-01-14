@@ -24,17 +24,17 @@
     </header>
     <main>
         <div id="exercise-settings">
-            <article id="settings">
-                <input type="checkbox" id="ignore-casing" name="ignore-casing" />
+            <div id="settings">
+                <input type="checkbox" id="ignore-casing" name="ignore-casing" >
                 <label for="ignore-casing">Ignore casing</label>
                 <div id="language-selection">
-                    <input type="radio" name="language" value="swedish" id="swedish" checked />
-                    <label for="sv-lang">Swedish</label>
-                    <input type="radio" name="language" value="english" id="english" />
-                    <label for="eng-lang">English</label>
+                    <input type="radio" name="language" value="swedish" id="swedish" checked >
+                    <label for="swedish">Swedish</label>
+                    <input type="radio" name="language" value="english" id="english" >
+                    <label for="english">English</label>
                 </div>
-            </article>
-            <article id="choose-text">
+            </div>
+            <div id="choose-text">
                 <label for="chosen-text-title">Choose text</label>
                 <select id="chosen-text-title" name="chosen-text-title">
                     <option value="Jag har en dröm" class="swedish">Jag har en dröm</option>
@@ -44,22 +44,22 @@
                     <option value="Love and Weirdness" class="english invisible">Love and Weirdness</option>
                     <option value="Integrity" class="english invisible">Integrity</option>
                 </select>
-            </article>
+            </div>
         </div>
         <section id="display-text">
             <h2 id="displayed-title">Jag har en dröm</h2>
             <p id="author"><em><span id="displayed-author-name">Martin Luther King Jr.</span><span> (<span id="words-amount">57</span> words, </span><span><span id="character-amount">320</span> chars)</span></em></p>
             <p id="display-chosen-text">Så säger jag er, mina vänner, att jag trots dagens och morgondagens svårigheter har en dröm. Det är en dröm med djupa rötter i den amerikanska drömmen om att denna nation en dag kommer att resa sig och leva ut den övertygelsens innersta mening, som vi håller för självklar: Att alla människor är skapade med samma värde.</p>
         </section>
-        <article id="text-input">
+        <div id="text-input">
             <input type="text" id="text-input-field" placeholder="Type here...">
             <audio id="errorSound" src="./audio/buzzer-or-wrong-answer-20582.mp3" preload="auto"></audio>
-        </article>
-        <article id="buttons">
+        </div>
+        <div id="buttons">
             <button id="play-button" class=""><i class="fa fa-play"></i></button>
             <button id="stop-button" class="invisible"><i class="fa fa-stop"></i></button>
-        </article>
-        <article id="general-statistics">
+        </div>
+        <div id="general-statistics">
             <div id="wmp-statistics">
                 <p>Gross WPM: <span id="gross-wmp">0</span></p>
                 <p>Net WPM: <span id="net-wmp">0</span></p>
@@ -68,7 +68,7 @@
                 <p>Accuracy: <span id="accuracy">0</span>%</p>
                 <p>Errors: <span id="errors">0</span></p>
             </div>
-        </article>
+        </div>
     </main>
     <footer>
         <hr>
