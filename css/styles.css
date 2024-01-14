@@ -133,12 +133,10 @@ select {
 
 .correctly-typed {
     color: #838383;
-    background-color: none;
 }
 
 .incorrectly-typed {
     color: red;
-    background-color: none;
 }
 
 /* Styles for the typing section */
