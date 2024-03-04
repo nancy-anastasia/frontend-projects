@@ -1,12 +1,16 @@
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 
+// Configuration object for Chakra UI theme settings
 const config: ThemeConfig = {
+  // Setting the initial color mode to "dark" for the entire application
   initialColorMode: "dark",
 };
 
+// Extending the default Chakra UI theme in order to customize it
 const theme = extendTheme({
   config,
   colors: {
+    // Customizing the 'gray' color palette with specific shades
     gray: {
       50: "#f9f9f9",
       100: "#ededed",
