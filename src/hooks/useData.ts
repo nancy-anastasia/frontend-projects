@@ -14,7 +14,7 @@ interface FetchResponse<T> {
  * @param {AxiosRequestConfig} [requestConfig] - Optional Axios request configuration to customize the request
  * @param {any[]} [deps] - Optional array of dependencies that, when changed, will trigger the useEffect hook
  *
- * @returns An object containing the fetched data array, an error message (if any), and a loading state
+ * Returns An object containing the fetched data array, an error message (if any), and a loading state
  */
 const useData = <T>(
   endpoint: string,
