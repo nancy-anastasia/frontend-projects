@@ -1,3 +1,4 @@
+// Importing components and hooks from Chakra UI, local components, and React
 import { Box, Flex, Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
@@ -5,10 +6,11 @@ import GenreList from "./components/GenreList";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
 import { useState } from "react";
-import { Genre } from "./hooks/useGenres";
-import { Platform } from "./hooks/useGames";
+import { Genre } from "./hooks/useGenres"; // A custom hook for fetching genre data
+import { Platform } from "./hooks/useGames"; // A custom hook for fetching platform data
 import GameHeading from "./components/GameHeading";
 
+// Definition of the GameQuery interface
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
@@ -17,9 +19,11 @@ export interface GameQuery {
 }
 
 function App() {
+  // State hook to manage the game query parameters
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
   return (
+    // Grid layout container to structure the app's layout
     <Grid
       templateAreas={{
         base: `"nav" "main"`,
