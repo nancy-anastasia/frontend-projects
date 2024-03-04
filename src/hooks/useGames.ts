@@ -21,7 +21,7 @@ export interface Game {
  * Custom hook to fetch game data based on provided query parameters.
  *
  * @param {GameQuery} gameQuery - Object containing query parameters for fetching games
- * @returns The data, loading state, and error information from the useData hook
+ * Returns The data, loading state, and error information from the useData hook
  */
 const useGames = (gameQuery: GameQuery) =>
   useData<Game>(
