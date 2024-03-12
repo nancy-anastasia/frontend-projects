@@ -32,7 +32,7 @@ TypoTrack is built using the foundational web development technologies:
 
 ## Deployed project
 
-The deployed project can be accessed via this link: (a link to the project)
+The deployed project can be accessed via this link: [https://typotrack.vercel.app/](https://typotrack.vercel.app/)
 
 ![Screenshot of TypoTrack's start screen](./readme_images/typotrack-start.png "Screenshot of TypoTrack's start screen")
 
