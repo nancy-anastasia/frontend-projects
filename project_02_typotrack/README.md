@@ -34,7 +34,7 @@ TypoTrack is built using the foundational web development technologies:
 
 The deployed project can be accessed via this link: [https://typotrack.vercel.app/](https://typotrack.vercel.app/)
 
-![Screenshot of TypoTrack's start screen](./readme_images/typotrack-start.png "Screenshot of TypoTrack's start screen")
+![Screenshot of TypoTrack's start screen](./readme_images/typotrack-start1.png "Screenshot of TypoTrack's start screen")
 
 Checking correctness and displaying statistics:
 
