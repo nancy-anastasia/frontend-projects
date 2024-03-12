@@ -33,8 +33,12 @@ var errorsElem; // An element for outputting the number of errors
 // Initialize global variables and event handlers
 function init() {
   // References to the text options
-  swedishOptions = document.getElementById("chosen-text-title").getElementsByClassName("swedish");
-  englishOptions = document.getElementById("chosen-text-title").getElementsByClassName("english");
+  swedishOptions = document
+    .getElementById("chosen-text-title")
+    .getElementsByClassName("swedish");
+  englishOptions = document
+    .getElementById("chosen-text-title")
+    .getElementsByClassName("english");
 
   // Get data from the xml file ("xmlFile") and an array of titles ("titles")
   fetchData();
@@ -94,7 +98,7 @@ window.addEventListener("load", init);
 // Fetch data from the XML file
 function fetchData() {
   // Retreive the XML file
-  fetch("https://studenter.miun.se/~naku2300/dt146g/project/texts.xml")
+  fetch("./texts.xml")
     .then((response) => {
       // If there is no response from the server
       if (!response.ok) {
@@ -140,7 +144,9 @@ function handleTextTitleChange() {
     if (title === chosenTextTitle) {
       // Retrieve the author name and text
       chosenTextAuthor = titles[i].nextElementSibling.textContent;
-      chosenText = titles[i].nextElementSibling.nextElementSibling.nextElementSibling.textContent;
+      chosenText =
+        titles[i].nextElementSibling.nextElementSibling.nextElementSibling
+          .textContent;
     }
   }
   updateDisplayedText();
@@ -160,9 +166,14 @@ function updateDisplayedText() {
   // Count the amount of words and characters in the text
   // Count the amount of words
   // The first .replace - exclude  start and end white-space, the second .replace - make 2 or more spaces to 1, the third .replace - exclude newline with a start spacing. To filter out empty strings: .filter(function(str){return str!="";})
-  let wordCount = chosenText.replace(/(^\s*)|(\s*$)/gi, "").replace(/[ ]{2,}/gi, " ").replace(/\n /, "\n").split(" ").filter(function (str) {
-    return str != "";
-  }).length;
+  let wordCount = chosenText
+    .replace(/(^\s*)|(\s*$)/gi, "")
+    .replace(/[ ]{2,}/gi, " ")
+    .replace(/\n /, "\n")
+    .split(" ")
+    .filter(function (str) {
+      return str != "";
+    }).length;
   // Count the total amount of characters in the text
   let characterCount = chosenText.length;
 
@@ -235,7 +246,12 @@ function handleLanguageChange() {
   textDropdown.dispatchEvent(event);
 
   // Statistics must be 0
-  if (grossWMP !== 0 || netWPM !== 0 || accuracyRate !== 0 || errorCount !== 0) {
+  if (
+    grossWMP !== 0 ||
+    netWPM !== 0 ||
+    accuracyRate !== 0 ||
+    errorCount !== 0
+  ) {
     grossWMP = 0;
     netWPM = 0;
     accuracyRate = 0;
@@ -272,7 +288,9 @@ function startGame() {
   textDropdown.disabled = true;
 
   // Add an event listener for when a user is typing in the input field
-  document.getElementById("text-input-field").addEventListener("input", handleUserTextInput);
+  document
+    .getElementById("text-input-field")
+    .addEventListener("input", handleUserTextInput);
 
   // Select all spans in the text
   textSpans = document.querySelectorAll("#display-chosen-text span");
@@ -297,7 +315,12 @@ function startGame() {
   textSpans[typeCount].classList.add("infocus");
 
   // Put statistics to 0
-  if (grossWMP !== 0 || netWPM !== 0 || accuracyRate !== 0 || errorCount !== 0) {
+  if (
+    grossWMP !== 0 ||
+    netWPM !== 0 ||
+    accuracyRate !== 0 ||
+    errorCount !== 0
+  ) {
     grossWMP = 0;
     netWPM = 0;
     accuracyRate = 0;
@@ -336,7 +359,9 @@ function stopGame() {
   // Enable the dropdown
   textDropdown.disabled = false;
   // Remove an event listener for typingfrom the input field
-  document.getElementById("text-input-field").removeEventListener("input", handleUserTextInput);
+  document
+    .getElementById("text-input-field")
+    .removeEventListener("input", handleUserTextInput);
 }
 // End of the stopGame() function
 // --------------------------------------------------
@@ -426,7 +451,6 @@ function updateStatistics() {
   netWPM = Math.round(grossWMP - errorCount / elapsedTime);
   grossWmpElem.innerText = grossWMP;
   netWmpElem.innerText = netWPM;
-
 }
 // End of the updateStatistics() function
 // -------------------------------------------------
