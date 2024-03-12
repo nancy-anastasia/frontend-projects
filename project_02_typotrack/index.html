@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<!-- 
+    Nancy Anastasia Kuznetsova
+    naku2300
+    naku2300@student.miun.se
+-->
+
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypoTrack</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="./img/keyboard.png" alt="Graphics of a computer">
+        <h1 id="color-animation">TypoTrack</h1>
+    </header>
+    <main>
+        <div id="exercise-settings">
+            <div id="settings">
+                <input type="checkbox" id="ignore-casing" name="ignore-casing">
+                <label for="ignore-casing">Ignore casing</label>
+                <div id="language-selection">
+                    <input type="radio" name="language" value="swedish" id="swedish" checked>
+                    <label for="swedish">Swedish</label>
+                    <input type="radio" name="language" value="english" id="english">
+                    <label for="english">English</label>
+                </div>
+            </div>
+            <div id="choose-text">
+                <label for="chosen-text-title">Choose text</label>
+                <select id="chosen-text-title" name="chosen-text-title">
+                    <option value="Jag har en dröm" class="swedish">Jag har en dröm</option>
+                    <option value="Doktor Glas" class="swedish">Doktor Glas</option>
+                    <option value="Moln" class="swedish">Moln</option>
+                    <option value="Katherine" class="english invisible">Katherine</option>
+                    <option value="Love and Weirdness" class="english invisible">Love and Weirdness</option>
+                    <option value="Integrity" class="english invisible">Integrity</option>
+                </select>
+            </div>
+        </div>
+        <section id="display-text">
+            <h2 id="displayed-title">Jag har en dröm</h2>
+            <p id="author"><em><span id="displayed-author-name">Martin Luther King Jr.</span><span> (<span id="words-amount">57</span> words, </span><span><span id="character-amount">320</span> chars)</span></em></p>
+            <p id="display-chosen-text">Så säger jag er, mina vänner, att jag trots dagens och morgondagens svårigheter har en dröm. Det är en dröm med djupa rötter i den amerikanska drömmen om att denna nation en dag kommer att resa sig och leva ut den övertygelsens innersta mening, som vi håller för självklar: Att alla människor är skapade med samma värde.</p>
+        </section>
+        <div id="text-input">
+            <input type="text" id="text-input-field" placeholder="Type here...">
+            <audio id="errorSound" src="./audio/buzzer-or-wrong-answer-20582.mp3" preload="auto"></audio>
+        </div>
+        <div id="buttons">
+            <button id="play-button" class=""><i class="fa fa-play"></i></button>
+            <button id="stop-button" class="invisible"><i class="fa fa-stop"></i></button>
+        </div>
+        <div id="general-statistics">
+            <div id="wmp-statistics">
+                <p>Gross WPM: <span id="gross-wmp">0</span></p>
+                <p>Net WPM: <span id="net-wmp">0</span></p>
+            </div>
+            <div id="accuracy-statistics">
+                <p>Accuracy: <span id="accuracy">0</span>%</p>
+                <p>Errors: <span id="errors">0</span></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <p>Copyright @ 2024 Nancy Anastasia Kuznetsova. No rights reserved.</p>
+        <a href="mailto:naku2300@student.miun.se">Contact the developer</a>
+    </footer>
+</body>
+
+</html>
