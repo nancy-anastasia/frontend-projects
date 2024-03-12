@@ -36,7 +36,7 @@ The deployed project can be accessed via this link: (a link to the project)
 
 ![Screenshot of TypoTrack's start screen](./readme_images/typotrack-start.png "Screenshot of TypoTrack's start screen")
 
-Checking correctness:
+Checking correctness and displaying statistics:
 
 ![Screenshot of TypoTrack's screen while typing](./readme_images/typotrack-typing.png "Screenshot of TypoTrack's screen while typing")
 
