@@ -14,7 +14,7 @@ Both projects are testament to my commitment to clean code, thoughtful design, a
 
 ## Project List
 
-### Gamepedia
+### 1. Gamepedia
 
 Deployed Project: [https://gamepedia-five.vercel.app/](https://gamepedia-five.vercel.app/)
 
@@ -27,15 +27,21 @@ Deployed Project: [https://gamepedia-five.vercel.app/](https://gamepedia-five.ve
 
 Gamepedia is a dynamic web application that serves as a comprehensive catalog for video games, allowing users to sort and filter games by various criteria and access detailed information fetched from the rawg.io API.
 
-Sorting games by genre, platform and other features:
+1. Sorting games by genre, platform and other features
 
-![Screenshot of Gamepedia's main screen](./project_01_gamepedia/images/gamepedia-screenshot.png "Screenshot of Gamepedia's main screen")
+- In dark mode:
 
-Searching for a game by title on Gamepedia:
+![Screenshot of Gamepedia's main screen in dark mode](./project_01_gamepedia/images/gamepedia-1.png "Screenshot of Gamepedia's main screen in dark mode")
 
-![Screenshot of Gamepedia's search results](./project_01_gamepedia/images/gamepedia-search.png "Screenshot of Gamepedia's search results")
+- In light mode:
 
-### TypoTrack
+![Screenshot of Gamepedia's main screen in light mode](./project_01_gamepedia/images/gamepedia-2.png "Screenshot of Gamepedia's main screen in light mode")
+
+2. Searching for a game by title on Gamepedia
+
+![Screenshot of Gamepedia's search results](./project_01_gamepedia/images/gamepedia-3.png "Screenshot of Gamepedia's search results")
+
+### 2. TypoTrack
 
 Deployed Project: [https://typotrack.vercel.app/](https://typotrack.vercel.app/)
 
