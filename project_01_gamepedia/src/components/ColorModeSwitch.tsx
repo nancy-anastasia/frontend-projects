@@ -13,7 +13,10 @@ const ColorModeSwitch = () => {
         isChecked={colorMode === "dark"} // Sets the switch to "on" if the current color mode is "dark"
         onChange={toggleColorMode} // Toggles the color mode between light and dark on switch
       />
-      <Text whiteSpace="nowrap">Dark Mode</Text> // Label for the switch
+      // Conditional rendering for the label of the switch
+      <Text whiteSpace="nowrap">
+        {colorMode === "dark" ? "Light Mode" : "Dark Mode"}
+      </Text>{" "}
     </HStack>
   );
 };
