@@ -9,7 +9,7 @@ const ColorModeSwitch = () => {
     // Horizontal stack for aligning the switch and label
     <HStack padding="10px">
       <Switch
-        colorScheme="green" // Sets the color theme of the switch
+        colorScheme="teal" // Sets the color theme of the switch
         isChecked={colorMode === "dark"} // Sets the switch to "on" if the current color mode is "dark"
         onChange={toggleColorMode} // Toggles the color mode between light and dark on switch
       />
