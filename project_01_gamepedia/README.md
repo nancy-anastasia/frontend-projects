@@ -29,13 +29,19 @@ Enjoy a seamless experience on any device, thanks to a mobile-first approach and
 
 The deployed project can be accessed via this link: [https://gamepedia-five.vercel.app/](https://gamepedia-five.vercel.app/)
 
-Sorting games by genre, platform and other features:
+1. Sorting games by genre, platform and other features
 
-![Screenshot of Gamepedia's main screen](./images/gamepedia-screenshot.png "Screenshot of Gamepedia's main screen")
+- In dark mode:
 
-Searching for a game by title on Gamepedia:
+![Screenshot of Gamepedia's main screen in dark mode](./images/gamepedia-1.png "Screenshot of Gamepedia's main screen in dark mode")
 
-![Screenshot of Gamepedia's search results](./images/gamepedia-search.png "Screenshot of Gamepedia's search results")
+- In light mode:
+
+![Screenshot of Gamepedia's main screen in light mode](./images/gamepedia-2.png "Screenshot of Gamepedia's main screen in light mode")
+
+2. Searching for a game by title on Gamepedia
+
+![Screenshot of Gamepedia's search results](./images/gamepedia-3.png "Screenshot of Gamepedia's search results")
 
 ## To run Gamepedia locally
 
