@@ -1,5 +1,5 @@
 import { HStack, Image } from "@chakra-ui/react";
-import logo from "../assets/logo.webp";
+import logo from "../assets/logo-gamepedia.png";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 
@@ -12,8 +12,8 @@ interface Props {
 const NavBar = ({ onSearch }: Props) => {
   return (
     // Horizontal stack for aligning navigation bar items, with space between them
-    <HStack justifyContent="space-between" padding="10px">
-      <Image src={logo} boxSize="60px" />
+    <HStack justifyContent="space-between" spacing="50px" padding="20px">
+      <Image src={logo} boxSize="60px" borderRadius="lg" />
       <SearchInput onSearch={onSearch} />
       <ColorModeSwitch />
     </HStack>

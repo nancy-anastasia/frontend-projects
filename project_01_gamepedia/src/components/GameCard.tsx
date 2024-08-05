@@ -13,7 +13,7 @@ interface Props {
 const GameCard = ({ game }: Props) => {
   return (
     // Card component from Chakra UI as the container
-    <Card>
+    <Card boxShadow="none" bg="transparent">
       {/* Displaying the game's image, modified for cropping via getCroppedImageUrl */}
       <Image src={getCroppedImageUrl(game.background_image)} />
       {/* Card body containing the game details */}

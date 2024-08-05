@@ -1,4 +1,9 @@
-import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import {
+  Input,
+  InputGroup,
+  InputLeftElement,
+  useColorMode,
+} from "@chakra-ui/react";
 import { useRef } from "react";
 import { BsSearch } from "react-icons/bs";
 
@@ -10,6 +15,7 @@ interface Props {
 // Component for a search input field, allowing users to search for games
 const SearchInput = ({ onSearch }: Props) => {
   const ref = useRef<HTMLInputElement>(null); // useRef hook to access the input element
+  const { colorMode } = useColorMode(); // Color mode through ChakraProvider in main.tsx
 
   return (
     // Wrapping the input in a form element to handle form submissions
@@ -27,8 +33,13 @@ const SearchInput = ({ onSearch }: Props) => {
           borderRadius={20}
           placeholder={"Search games..."}
           variant="filled"
+          bg={colorMode === "dark" ? "gray.600" : "gray.100"} // Background color based on color mode
+          _hover={{
+            bg: colorMode === "dark" ? "gray.700" : "#FFFFFF", // Hover background color based on color mode
+            borderColor: colorMode === "dark" ? "#818791" : "#c0c3c8", // Hover border color based on color mode
+          }}
           _focus={{
-            borderColor: "#818791",
+            borderColor: "#8e939c", // Focus border color
           }}
         />
       </InputGroup>
