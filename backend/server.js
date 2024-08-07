@@ -3,6 +3,10 @@
 // Import necessary modules
 require("dotenv").config();
 const express = require("express");
+const initializeDatabase = require("./config/db");
+
+// Call the function to initialize the database connection
+initializeDatabase();
 
 // Create an instance of an Express app
 const app = express();
