@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo */}
       <div className="navbar__logo">
-        <h2>Online Shop - React, Redux and Node.js</h2>
+        <h2>Online Shop - React, React Router, Redux and Node.js</h2>
       </div>
       <ul className="navbar__links">
         <li>
