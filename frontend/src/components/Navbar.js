@@ -6,14 +6,14 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo */}
       <div className="navbar__logo">
-        <h2>Online Shop - React, React Router, Redux and Node.js</h2>
+        <h2>UrbanGear Shop</h2>
+        <p>React, React Router, Redux and Node.js</p>
       </div>
       <ul className="navbar__links">
         <li>
-          <Link to="/cart">
+          <Link to="/cart" className="cart__link">
             <i className="fas fa-shopping-cart"></i>
-            Cart
-            <span className="cartlogo__badge">0</span>
+            <span className="cart__count">0</span>
           </Link>
         </li>
         <li>
