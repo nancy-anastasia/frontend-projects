@@ -8,13 +8,14 @@ import CartView from "./screens/CartView";
 
 // Import components
 import Navbar from "./components/Navbar";
+import Backdrop from "./components/Backdrop";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       {/* NavDrawer */}
-      {/* Backdrop */}
+      <Backdrop />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
