@@ -9,12 +9,13 @@ import CartView from "./screens/CartView";
 // Import components
 import Navbar from "./components/Navbar";
 import Backdrop from "./components/Backdrop";
+import NavDrawer from "./components/NavDrawer";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      {/* NavDrawer */}
+      <NavDrawer />
       <Backdrop />
       <main>
         <Routes>
