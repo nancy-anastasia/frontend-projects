@@ -1,7 +1,7 @@
 import "./Backdrop.css";
 
-const Backdrop = () => {
-  return <div className="backdrop"></div>;
+const Backdrop = ({ isVisible }) => {
+  return isVisible && <div className="backdrop"></div>;
 };
 
 export default Backdrop;

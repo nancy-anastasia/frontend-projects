@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Import screens
@@ -12,11 +13,13 @@ import Backdrop from "./components/Backdrop";
 import NavDrawer from "./components/NavDrawer";
 
 function App() {
+  const [navDrawerToggle, setNavDrawerToggle] = useState(false);
+
   return (
     <BrowserRouter>
       <Navbar />
-      <NavDrawer />
-      <Backdrop />
+      <NavDrawer isVisible={navDrawerToggle} />
+      <Backdrop isVisible={navDrawerToggle} />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />

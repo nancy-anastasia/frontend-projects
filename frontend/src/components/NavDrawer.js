@@ -1,7 +1,13 @@
 import "./NavDrawer.css";
 
-const NavDrawer = () => {
-  return <div className="nav-drawer">NavDrawer</div>;
+const NavDrawer = ({ isVisible }) => {
+  const navDrawerStyle = ["nav-drawer"];
+
+  if (isVisible) {
+    navDrawerStyle.push("show");
+  }
+
+  return <div className={navDrawerStyle.join(" ")}>NavDrawer</div>;
 };
 
 export default NavDrawer;
