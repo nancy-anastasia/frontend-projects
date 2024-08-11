@@ -18,7 +18,10 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar hamburgerMenuClick={() => setNavDrawerToggle(true)} />
-      <NavDrawer isVisible={navDrawerToggle} />
+      <NavDrawer
+        isVisible={navDrawerToggle}
+        navDrawerClick={() => setNavDrawerToggle(false)}
+      />
       <Backdrop
         isVisible={navDrawerToggle}
         backdropClick={() => setNavDrawerToggle(false)}
