@@ -6,12 +6,13 @@
 
 .homepage__title {
     font-size: 1.5rem;
-    color: #156760;
+    color: #1D8D84;
     margin-bottom: 1rem;
     margin-left: 8px;
 }
 
 .homepage__products {
     display: grid;
-    grid-template-columns: repeat (4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
