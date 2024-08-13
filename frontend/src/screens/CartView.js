@@ -4,17 +4,22 @@ import CartItem from "../components/CartItem";
 const CartView = () => {
   return (
     <div className="cartview">
-      <div className="cartview__left">
-        <h2>Shopping Cart</h2>
-        <CartItem />
-      </div>
-      <div className="cartview__right">
-        <div className="cartview__info">
-          <p>Subtotal (0) items</p>
-          <p>$499.99</p>
+      <h2>Shopping Cart</h2>
+      <div className="cartview__container">
+        <div className="cartview__left">
+          <CartItem />
+          <CartItem />
+          <CartItem />
+          <CartItem />
         </div>
-        <div>
-          <button>Proceed to Checkout</button>
+        <div className="cartview__right">
+          <div className="cartview__info">
+            <p>(0) items</p>
+            <p>Total: $499.99</p>
+          </div>
+          <div>
+            <button>Proceed to Checkout</button>
+          </div>
         </div>
       </div>
     </div>
