@@ -107,8 +107,7 @@
         height: 300px; 
         width: 100%;  
         min-width: 250px; 
-        display: flex;
-        justify-content: center;
+        display: block;
     }
 }
 
