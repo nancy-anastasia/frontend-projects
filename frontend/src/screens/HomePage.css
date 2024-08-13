@@ -16,3 +16,34 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 0.7rem;
 }
+
+@media (max-width: 1350px) {
+    .homepage {
+        width: 90%;
+    }
+    .homepage__products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 940px) {
+    .homepage__products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 630px) {
+    .homepage__products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .homepage {
+        width: 80%;
+    }
+}
+
+@media (max-width: 360px) {
+    .homepage {
+        width: 90%;
+    }
+}
