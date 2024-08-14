@@ -38,7 +38,7 @@ export const getProductsReducer = (
  * @param {Object} action - Action object to reduce
  * @returns {Object} The new state after applying the action
  */
-export const productDetailsReducer = (
+export const getProductDetailsReducer = (
   state = { product: {}, loading: false },
   action
 ) => {
