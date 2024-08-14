@@ -11,7 +11,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 // Importing thunk for handling asynchronous actions
-import thunk from "redux-thunk";
+import { thunk } from "redux-thunk";
 
 /* 
   If you're only using redux-thunk without any additional custom middleware, 
@@ -21,8 +21,8 @@ import thunk from "redux-thunk";
   then including it like this is necessary.
 */
 
-// Assuming there are combined reducers in a "reducers" file
-import rootReducer from "./reducers"; // If reducers are defined and combined
+// Import combined reducers from the "reducers" file
+import rootReducer from "./reducers/reducers";
 
 // Middleware setup to handle asynchronous actions (e.g., API calls)
 const middleware = [thunk];
