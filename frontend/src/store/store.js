@@ -6,10 +6,19 @@
   and reliability by automatically configuring middleware and enabling Redux DevTools in development  environments.
  */
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { cartReducer } from "./reducers/cartReducers"; // Importing the cartReducer for the cart state management
 
+// Importing the `cartReducer` for the cart state management
+import { cartReducer } from "./reducers/cartReducers";
+// Importing the `getProductsReducer` for handling the state of product listings
+import { getProductsReducer } from "./reducers/productReducers";
+// Importing the `productDetailsReducer` for managing the loading, success, and failure states of fetching detailed information for a specific product
+import { getProductDetailsReducer } from "./reducers/productReducers";
+
+// Combines all the above reducers into a single root reducer
 const reducer = combineReducers({
-  cart: cartReducer, // Combines the cartReducer into the root reducer
+  cart: cartReducer,
+  getProductsList: getProductsReducer,
+  getProductDetails: getProductDetailsReducer,
 });
 
 // Configure and export the Redux store. Default middleware from Redux Toolkit includes thunk.
