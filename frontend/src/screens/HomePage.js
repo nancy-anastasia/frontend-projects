@@ -24,9 +24,18 @@ const HomePage = () => {
         {loading ? (
           <Loader />
         ) : error ? (
-          <h2>{error}</h2>
+          <p>{error}</p>
         ) : (
-          products.map((product) => <Product />)
+          products.map((product) => (
+            <Product
+              key={product._id}
+              productId={product._id}
+              imageUrl={product.imageUrl}
+              productName={product.name}
+              productDescription={product.description}
+              productPrice={product.price}
+            />
+          ))
         )}
       </div>
     </div>
