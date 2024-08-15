@@ -6,7 +6,7 @@ import axios from "axios";
  * Async action creator to fetch a list of all products.
  * Dispatches a request action, makes an API call, and then dispatches either a success or fail action based on the response.
  */
-export const getProductsList = () => async (dispatch) => {
+export const getProductsData = () => async (dispatch) => {
   try {
     // Notifies the application that a request to fetch products has started
     dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST });

@@ -17,7 +17,7 @@ import { getProductDetailsReducer } from "./reducers/productReducers";
 // Combines all the above reducers into a single root reducer
 const reducer = combineReducers({
   cart: cartReducer,
-  getProductsList: getProductsReducer,
+  getProductsData: getProductsReducer,
   getProductDetails: getProductDetailsReducer,
 });
 
