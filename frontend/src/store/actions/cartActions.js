@@ -46,3 +46,22 @@ export const removeFromCart = (id) => (dispatch, getState) => {
   // Update localStorage to sync with the current state of the cart.
   localStorage.setItem("cart", JSON.stringify(getState().cart.cartItems));
 };
+
+/*
+ * This function updates the quantity of an item in the cart.
+ * It takes the item ID and the new quantity as arguments.
+ */
+export const updateCartItemQuantity =
+  (productId, productQuantity) => (dispatch, getState) => {
+    // Dispatching the update action with the item ID and new quantity
+    dispatch({
+      type: actionTypes.UPDATE_CART_ITEM_QUANTITY,
+      payload: {
+        productId,
+        productQuantity: parseInt(productQuantity), // Ensuring the quantity is an integer
+      },
+    });
+
+    // Update localStorage to sync with the current state of the cart after quantity update.
+    localStorage.setItem("cart", JSON.stringify(getState().cart.cartItems));
+  };

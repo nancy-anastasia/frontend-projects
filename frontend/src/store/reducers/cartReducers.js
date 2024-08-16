@@ -32,9 +32,23 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
         // If the item doesn't exist, add it to the cart
         return {
           ...state,
-          cartItems: [...state.cartItems, newItem], // Add new item to cartItems array
+          cartItems: [
+            ...state.cartItems,
+            { ...newItem, productQuantity: newItem.productQuantity },
+          ], // Add new item to cartItems array
         };
       }
+
+    // Handle updating item quantity in the cart
+    case actionTypes.UPDATE_CART_ITEM_QUANTITY:
+      return {
+        ...state,
+        cartItems: state.cartItems.map((cartItem) =>
+          cartItem.productId === action.payload.productId
+            ? { ...cartItem, productQuantity: action.payload.productQuantity }
+            : cartItem
+        ),
+      };
 
     // Handle removing an item from the cart
     case actionTypes.REMOVE_FROM_CART:

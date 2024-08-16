@@ -8,7 +8,11 @@ import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
 
 // Importing actions
-import { addToCart, removeFromCart } from "../store/actions/cartActions";
+import {
+  addToCart,
+  removeFromCart,
+  updateCartItemQuantity,
+} from "../store/actions/cartActions";
 
 const CartView = () => {
   const dispatch = useDispatch();
@@ -16,8 +20,17 @@ const CartView = () => {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  const handleQuantityChange = (productId, productQuantity) => {
-    dispatch(addToCart(productId, productQuantity));
+  const handleQuantityChange = (productId, quantity) => {
+    dispatch(updateCartItemQuantity(productId, quantity));
+    /* const item = cartItems.find((item) => item.productId === productId);
+    if (item) {
+      dispatch(
+        addToCart({
+          ...item,
+          productQuantity: parseInt(quantity),
+        })
+      );
+    } */
   };
 
   const handleRemoveFromCart = (productId) => {
