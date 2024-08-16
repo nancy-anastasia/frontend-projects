@@ -19,6 +19,31 @@
 
 }
 
+.empty-cart > p {
+   margin-bottom: 10px;
+}
+
+.store-link {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px 20px 20px 0;
+    padding: 10px 10px 12px 10px;
+    max-width: 200px;
+    text-align: center;
+    background-color: #23a89d;
+    color: #fefefe;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.store-link:hover {
+    background-color: #27BBAE;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 
+                0 3px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
+}
+
 .cartview__right {
     flex: 0.3;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 
