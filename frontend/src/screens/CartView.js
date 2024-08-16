@@ -25,6 +25,20 @@ const CartView = () => {
     cartItems.map((item) => item.productId !== productId);
   };
 
+  const getCartCount = () => {
+    console.log("Cart Items:", cartItems);
+    return cartItems.reduce((totalQuantity, item) => {
+      console.log("Current item quantity:", item.productQuantity);
+      return totalQuantity + Number(item.productQuantity);
+    }, 0);
+  };
+
+  const getCartTotal = () => {
+    return cartItems.reduce((total, item) => {
+      return total + Number(item.price) * Number(item.productQuantity);
+    }, 0);
+  };
+
   return (
     <div className="cartview">
       <h2>Shopping Cart</h2>
@@ -55,8 +69,8 @@ const CartView = () => {
         </div>
         <div className="cartview__right">
           <div className="cartview__info">
-            <p>(0) items</p>
-            <p>Total: $499.99</p>
+            <p>{getCartCount()} items</p>
+            <p>Total: ${getCartTotal().toFixed(2)}</p>
           </div>
           <div>
             <button>Proceed to Checkout</button>
