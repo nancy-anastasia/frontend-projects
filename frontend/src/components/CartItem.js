@@ -9,6 +9,7 @@ const CartItem = ({
   cartItemCountInStock,
   cartItemProductQuantity,
   onQuantityChange,
+  onRemoveItem,
 }) => {
   return (
     <div className="cartitem">
@@ -30,7 +31,10 @@ const CartItem = ({
           </option>
         ))}
       </select>
-      <button className="cartitem__deleteBtn">
+      <button
+        className="cartitem__deleteBtn"
+        onClick={() => onRemoveItem(cartItemId)}
+      >
         <i className="fas fa-trash"></i>
       </button>
     </div>

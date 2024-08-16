@@ -35,7 +35,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
       return {
         ...state,
         cartItems: state.cartItems.filter(
-          (cartItem) => cartItem.product !== action.payload // Remove an item based on product ID
+          (cartItem) => cartItem.productId !== action.payload // Remove an item based on product ID
         ),
       };
 
