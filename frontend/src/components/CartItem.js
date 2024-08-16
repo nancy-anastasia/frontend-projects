@@ -8,6 +8,7 @@ const CartItem = ({
   cartItemPrice,
   cartItemCountInStock,
   cartItemProductQuantity,
+  onQuantityChange,
 }) => {
   return (
     <div className="cartitem">
@@ -18,7 +19,11 @@ const CartItem = ({
         <p>{cartItemName}</p>
       </Link>
       <p className="cartitem__price">${cartItemPrice}</p>
-      <select className="cartitem__select" value={cartItemProductQuantity}>
+      <select
+        className="cartitem__select"
+        value={cartItemProductQuantity}
+        onChange={(event) => onQuantityChange(cartItemId, event.target.value)}
+      >
         {Array.from({ length: cartItemCountInStock }, (_, index) => (
           <option key={index + 1} value={index + 1}>
             {index + 1}

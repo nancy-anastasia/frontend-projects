@@ -7,11 +7,18 @@ import { Link } from "react-router-dom";
 // Importing components
 import CartItem from "../components/CartItem";
 
+// Importing actions
+import { addToCart } from "../store/actions/cartActions";
+
 const CartView = () => {
   const dispatch = useDispatch();
 
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+
+  const handleQuantityChange = (productId, productQuantity) => {
+    dispatch(addToCart(productId, productQuantity));
+  };
 
   return (
     <div className="cartview">
@@ -35,6 +42,7 @@ const CartView = () => {
                 cartItemPrice={item.price}
                 cartItemCountInStock={item.countInStock}
                 cartItemProductQuantity={item.productQuantity}
+                onQuantityChange={handleQuantityChange}
               />
             ))
           )}
