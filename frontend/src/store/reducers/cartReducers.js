@@ -7,26 +7,32 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
   switch (action.type) {
     // Handle adding an item to the cart
     case actionTypes.ADD_TO_CART:
-      const item = action.payload; // Item being added to the cart
+      const newItem = action.payload; // Item being added to the cart
 
       // Check if the item already exists in the cart based on product ID
       const existingItem = state.cartItems.find(
-        (cartItem) => cartItem.product === item.product
+        (cartItem) => cartItem.productId === newItem.productId
       );
 
       if (existingItem) {
-        // If the item exists, replace it with the new item data
+        // If the item exists, increase its quantity
         return {
           ...state, // Spread the current state to maintain immutability
           cartItems: state.cartItems.map((cartItem) =>
-            cartItem.product === existingItem.product ? item : cartItem
+            cartItem.productId === newItem.productId
+              ? {
+                  ...cartItem,
+                  productQuantity:
+                    cartItem.productQuantity + newItem.productQuantity,
+                }
+              : cartItem
           ),
         };
       } else {
         // If the item doesn't exist, add it to the cart
         return {
           ...state,
-          cartItems: [...state.cartItems, item], // Add new item to cartItems array
+          cartItems: [...state.cartItems, newItem], // Add new item to cartItems array
         };
       }
 
