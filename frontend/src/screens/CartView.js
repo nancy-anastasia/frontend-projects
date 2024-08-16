@@ -26,9 +26,7 @@ const CartView = () => {
   };
 
   const getCartCount = () => {
-    console.log("Cart Items:", cartItems);
     return cartItems.reduce((totalQuantity, item) => {
-      console.log("Current item quantity:", item.productQuantity);
       return totalQuantity + Number(item.productQuantity);
     }, 0);
   };
