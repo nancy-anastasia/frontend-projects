@@ -15,7 +15,7 @@ const products = [
     description:
       "Stay connected and track your fitness goals with the TimeWave Smart Watch. Featuring a vibrant touch display, this smartwatch offers notifications for calls, texts, and apps. It also includes a heart rate monitor, GPS tracking, and multiple sports modes to help you stay on top of your health and fitness. Water-resistant and with a battery life of up to 10 days, the TimeWave Smart Watch is designed to keep up with your active lifestyle.",
     price: 149.99,
-    countInStock: 75,
+    countInStock: 0,
   },
   {
     name: "SonicBlast Bluetooth Speaker",
