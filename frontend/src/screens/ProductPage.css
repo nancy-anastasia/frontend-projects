@@ -49,14 +49,23 @@
 
 .product-status {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
 }
 
-.product-status i {
+.product-in-stock {
     margin-right: 10px;
     font-size: 1.4rem;
     color: #1d8d84;
 }
+
+.product-out-of-stock {
+    margin-right: 10px;
+    font-size: 1.4rem;
+    color: #f02b2b;
+}
+
 
 .product-status span {
     font-weight: 500;

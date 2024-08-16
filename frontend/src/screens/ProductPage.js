@@ -1,39 +1,94 @@
+/* In React Router v6, the useParams hook should be used to access route parameters directly within the component. */
 import "./ProductPage.css";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams, useNavigate } from "react-router-dom";
 
-const ProductPage = () => {
+// Import components
+import Loader from "../components/Loader";
+
+// Import actions
+import { getProductDetails } from "../store/actions/productActions";
+import { addToCart } from "../store/actions/cartActions";
+
+const ProductPage = ({ history }) => {
+  const [productQuantity, setProductQuantity] = useState(1);
+  const { id } = useParams(); // Accessing the ID directly from URL parameters
+  const dispatch = useDispatch();
+  const navigate = useNavigate(); // Getting the navigate function
+
+  const productDetails = useSelector((state) => state.getProductDetails);
+  const { loading, error, product } = productDetails;
+
+  useEffect(() => {
+    if (!product || id !== product._id) {
+      dispatch(getProductDetails(id));
+    }
+  }, [id, dispatch, product]);
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(product._id, productQuantity));
+    navigate("/cart");
+  };
+
   return (
     <div className="product-page">
-      <div className="product-page__upper-part">
-        <div className="product-image">
-          <img
-            src="https://images.unsplash.com/photo-1598371611276-1bc503a270a4?q=80&w=2836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="product name"
-          />
-        </div>
-        <div className="product-info">
-          <p className="product-name">Product 1</p>
-          <p className="product-price">$499.99</p>
-          <p className="product-description">
-            Description: Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Explicabo odit harum numquam temporibus nemo cupiditate.
-          </p>
-          <div className="product-purchase-section">
-            <p className="product-status">
-              <i class="fa-solid fa-circle-check"></i>
-              <span>In Stock</span>
-            </p>
-            <p className="product-purchase">
-              <select>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <button type="button">Add to Cart</button>
-            </p>
+      {loading ? (
+        <Loader />
+      ) : error ? (
+        <p>{error}</p>
+      ) : (
+        <>
+          <div className="product-page__upper-part">
+            <div className="product-image">
+              <img src={product.imageUrl} alt={product.name} />
+            </div>
+            <div className="product-info">
+              <p className="product-name">{product.name}</p>
+              <p className="product-price">${product.price}</p>
+              <p className="product-description">{product.description}</p>
+              <div className="product-purchase-section">
+                <p className="product-status">
+                  <i
+                    className={
+                      product.countInStock > 0
+                        ? "fa-solid fa-circle-check product-in-stock"
+                        : "fa-solid fa-circle-xmark product-out-of-stock"
+                    }
+                  ></i>
+                  <span>
+                    {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                  </span>
+                </p>
+                <p className="product-purchase">
+                  {product.countInStock <= 0 ? (
+                    ""
+                  ) : (
+                    <select
+                      value={productQuantity}
+                      onChange={(event) =>
+                        setProductQuantity(Number(event.target.value))
+                      }
+                    >
+                      {Array.from(
+                        { length: product.countInStock },
+                        (_, index) => (
+                          <option key={index + 1} value={index + 1}>
+                            {index + 1}
+                          </option>
+                        )
+                      )}
+                    </select>
+                  )}
+                  <button type="button" onClick={handleAddToCart}>
+                    Add to Cart
+                  </button>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
     </div>
   );
 };
