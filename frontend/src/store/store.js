@@ -21,9 +21,20 @@ const reducer = combineReducers({
   getProductDetails: getProductDetailsReducer,
 });
 
+const cartDataFromLocalStorage = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
+
+const INITIAL_STATE = {
+  cart: {
+    cartItems: cartDataFromLocalStorage,
+  },
+};
+
 // Configure and export the Redux store. Default middleware from Redux Toolkit includes thunk.
 const store = configureStore({
   reducer, // Apply the combined reducers to the store
+  preloadedState: INITIAL_STATE,
 });
 
 export default store;
