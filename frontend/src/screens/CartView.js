@@ -22,15 +22,6 @@ const CartView = () => {
 
   const handleQuantityChange = (productId, quantity) => {
     dispatch(updateCartItemQuantity(productId, quantity));
-    /* const item = cartItems.find((item) => item.productId === productId);
-    if (item) {
-      dispatch(
-        addToCart({
-          ...item,
-          productQuantity: parseInt(quantity),
-        })
-      );
-    } */
   };
 
   const handleRemoveFromCart = (productId) => {
