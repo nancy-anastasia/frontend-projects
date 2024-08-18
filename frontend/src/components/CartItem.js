@@ -1,6 +1,20 @@
 import "./CartItem.css";
 import { Link } from "react-router-dom";
 
+/**
+ * CartItem Component displays a single item in the shopping cart, allowing users to view the item,
+ * navigate to its detail page, adjust quantity, and remove the item from the cart.
+ *
+ * Props:
+ *  - cartItemId (string): Unique identifier for the cart item
+ *  - cartItemName (string): Name of the product
+ *  - cartItemImage (string): URL of the product image
+ *  - cartItemPrice (number): Price of a single unit of the product
+ *  - cartItemCountInStock (number): Available stock for the product
+ *  - cartItemProductQuantity (number): Quantity of the product selected by the user in the cart
+ *  - onQuantityChange (function): Handler to update the quantity in the cart
+ *  - onRemoveItem (function): Handler to remove the item from the cart
+ */
 const CartItem = ({
   cartItemId,
   cartItemName,

@@ -1,7 +1,18 @@
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
-const Product = ({
+/**
+ * ProductCard Component represents a single product card displayed
+ * in a grid or list in an online store
+ *
+ * Props:
+ *  - productId (string): Unique identifier for the product
+ *  - imageUrl (string): URL of the product image
+ *  - productName (string): Name of the product
+ *  - productDescription (string): Description of the product
+ *  - productPrice (number): Price of the product
+ */
+const ProductCard = ({
   productId,
   imageUrl,
   productName,
@@ -16,6 +27,7 @@ const Product = ({
         <div className="product__info">
           <p className="product__name">{productName}</p>
           <p className="product__description">
+            {/* Display the product description truncated to 100 characters, or a default message if no description is provided. */}
             {productDescription
               ? productDescription.substring(0, 100) + "..."
               : "No description available."}
@@ -29,4 +41,4 @@ const Product = ({
   );
 };
 
-export default Product;
+export default ProductCard;
