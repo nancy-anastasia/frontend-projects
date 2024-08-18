@@ -15,6 +15,13 @@
     color: #333333;
 }
 
+.cartitem__image img {
+    display: block;
+    min-height: 50px;
+    max-height: 60px;
+    min-width: 80px;
+}
+
 .cartitem__name:hover {
     color: #1d8d84;
 }
@@ -59,15 +66,36 @@
 }
 
 @media (max-width: 500px) {
-    .cartitem__name {
-        font-size: 0.6rem;
-    }
     .cartitem__select {
         padding: 5px 7px;
     }
     .cartitem__deleteBtn {
         padding: 6px 8px;
     }
+}
+
+@media (max-width: 410px) {
+    .cartitem {
+        padding: 1rem 1rem 1rem 0;
+    }
+    .cartitem__image img {
+        height: 30px;
+        min-width: 30px;
+    }
+}
+
+@media (max-width: 370px) {
+    .cartitem {
+        padding: 1rem 0;
+    }
+    .cartitem__image img {
+        height: 20px;
+        min-width: 20px;
+    }
+}
+
+@media (max-width: 330px) {
+    .cartitem__name,
     .cartitem__price {
         font-size: 0.6rem;
     }
