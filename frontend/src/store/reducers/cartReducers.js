@@ -1,8 +1,10 @@
 // Importing action type constants
 import * as actionTypes from "../constants/cartConstants";
 
-// The cartReducer handles the state of the shopping cart, specifically the cartItems array.
-// Initial state is an empty array for cartItems.
+/**
+ * The cartReducer handles the state of the shopping cart, specifically the cartItems array.
+ * Initial state is an empty array for cartItems.
+ */
 export const cartReducer = (state = { cartItems: [] }, action) => {
   switch (action.type) {
     // Handle adding an item to the cart
