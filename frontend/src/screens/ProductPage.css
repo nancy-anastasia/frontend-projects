@@ -74,19 +74,24 @@
 .product-purchase-section > p > button {
     width: 100%;
     padding: 10px 16px;
-    background-color: #23a89d;
-    color: #fefefe;
     border: none;
-    cursor: pointer;
     border-radius: 10px;
     font-size: 1.2rem;
+    background-color: #23a89d;
+    color: #fefefe;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .product-purchase-section > p > button:hover {
     background-color: #27BBAE;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 
                 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-purchase {
+    display: flex;
+    gap: 10px;
 }
 
 .product-purchase select {
@@ -96,9 +101,18 @@
     font-size: 1rem;
 }
 
-.product-purchase {
+.product-purchase p {
+    font-size: 1.1rem;
+}
+
+.product-coming-soon {
     display: flex;
-    gap: 10px;
+    gap: 10px
+}
+
+.product-coming-soon i {
+    font-size: 1.4rem;
+    color: #27BBAE;
 }
 
 @media (max-width: 880px) {

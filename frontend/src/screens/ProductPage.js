@@ -80,9 +80,16 @@ const ProductPage = ({ history }) => {
                       )}
                     </select>
                   )}
-                  <button type="button" onClick={handleAddToCart}>
-                    Add to Cart
-                  </button>
+                  {product.countInStock > 0 ? (
+                    <button type="button" onClick={handleAddToCart}>
+                      Add to Cart
+                    </button>
+                  ) : (
+                    <p className="product-coming-soon">
+                      <i className="fa-solid fa-truck"></i>
+                      <p>Available for Purchase Shortly!</p>
+                    </p>
+                  )}
                 </p>
               </div>
             </div>
