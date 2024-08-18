@@ -151,7 +151,7 @@
     .product-page__product-image img {
         min-height: 100px;
     }
-    .product-purchase-section {
+    .product-page__purchase-section {
         min-width: 270px;
     }
 }
@@ -170,7 +170,7 @@
     .product-page__product-purchase {
         flex-direction: column;
     }
-    .product-purchase-section {
+    .product-page__purchase-section {
         min-width: 200px;
     }
 }
