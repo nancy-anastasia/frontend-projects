@@ -47,10 +47,10 @@ const CartView = () => {
       <div className="cartview__container">
         <div className="cartview__left">
           {cartItems.length === 0 ? (
-            <div className="empty-cart">
+            <div className="cartview__empty-cart">
               <p>Your shopping cart is currently empty. </p>
               <p>Browse our collection and find something you love!</p>
-              <Link to="/" className="store-link">
+              <Link to="/" className="cartview__store-link">
                 Return to Store
               </Link>
             </div>
