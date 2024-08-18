@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 
-// Import components
+// Import Loader component for display during data fetch
 import Loader from "../components/Loader";
 
-// Import actions
+// Import Redux actions for fetching product details and adding items to the cart
 import { getProductDetails } from "../store/actions/productActions";
 import { addToCart } from "../store/actions/cartActions";
 
@@ -17,15 +17,18 @@ const ProductPage = ({ history }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate(); // Getting the navigate function
 
+  // Accessing product details from Redux store
   const productDetails = useSelector((state) => state.getProductDetails);
   const { loading, error, product } = productDetails;
 
+  // Fetching product details based on product ID
   useEffect(() => {
     if (!product || id !== product._id) {
       dispatch(getProductDetails(id));
     }
   }, [id, dispatch, product]);
 
+  // Handles adding the product to the cart and navigating to the cart page
   const handleAddToCart = () => {
     dispatch(addToCart(product._id, productQuantity));
     navigate("/cart");
