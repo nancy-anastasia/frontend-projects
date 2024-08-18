@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // Import components and actions
-import Product from "../components/Product";
+import ProductCard from "../components/ProductCard";
 import Loader from "../components/Loader";
 import { getProductsData as productsList } from "../store/actions/productActions";
 
@@ -27,7 +27,7 @@ const HomePage = () => {
           <p>{error}</p>
         ) : (
           products.map((product) => (
-            <Product
+            <ProductCard
               key={product._id}
               productId={product._id}
               imageUrl={product.imageUrl}
