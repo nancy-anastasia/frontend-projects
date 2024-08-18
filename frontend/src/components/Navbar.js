@@ -20,8 +20,10 @@ const Navbar = ({ hamburgerMenuClick }) => {
         <div></div>
       </div>
       <div className="navbar__logo">
-        <h2>UrbanGear Shop</h2>
-        <p>React, React Router, Redux and Node.js</p>
+        <Link to="/">
+          <h2>UrbanGear Shop</h2>
+          <p>React, React Router, Redux and Node.js</p>
+        </Link>
       </div>
       <ul className="navbar__links">
         <li>
