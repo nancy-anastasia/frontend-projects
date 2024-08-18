@@ -59,7 +59,9 @@ const ProductPage = ({ history }) => {
                     }
                   ></i>
                   <span>
-                    {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                    {product.countInStock > 0
+                      ? `In Stock: ${product.countInStock}`
+                      : "Out of Stock"}
                   </span>
                 </p>
                 <p className="product-page__product-purchase">
