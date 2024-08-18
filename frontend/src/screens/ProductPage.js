@@ -40,27 +40,29 @@ const ProductPage = ({ history }) => {
       ) : (
         <>
           <div className="product-page__upper-part">
-            <div className="product-image">
+            <div className="product-page__product-image">
               <img src={product.imageUrl} alt={product.name} />
             </div>
-            <div className="product-info">
-              <p className="product-name">{product.name}</p>
-              <p className="product-price">${product.price}</p>
-              <p className="product-description">{product.description}</p>
-              <div className="product-purchase-section">
-                <p className="product-status">
+            <div className="product-page__product-info">
+              <p className="product-page__product-name">{product.name}</p>
+              <p className="product-page__product-price">${product.price}</p>
+              <p className="product-page__product-description">
+                {product.description}
+              </p>
+              <div className="product-page__purchase-section">
+                <p className="product-page__product-status">
                   <i
                     className={
                       product.countInStock > 0
-                        ? "fa-solid fa-circle-check product-in-stock"
-                        : "fa-solid fa-circle-xmark product-out-of-stock"
+                        ? "fa-solid fa-circle-check product-page__product-in-stock"
+                        : "fa-solid fa-circle-xmark product-page__product-out-of-stock"
                     }
                   ></i>
                   <span>
                     {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
                   </span>
                 </p>
-                <p className="product-purchase">
+                <p className="product-page__product-purchase">
                   {product.countInStock <= 0 ? (
                     ""
                   ) : (
@@ -85,7 +87,7 @@ const ProductPage = ({ history }) => {
                       Add to Cart
                     </button>
                   ) : (
-                    <p className="product-coming-soon">
+                    <p className="product-page__coming-soon">
                       <i className="fa-solid fa-truck"></i>
                       <p>Available for Purchase Shortly!</p>
                     </p>
