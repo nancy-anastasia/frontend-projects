@@ -1,0 +1,17 @@
+.loader-container {
+  padding: 10%;
+}
+
+.loader {
+    border: 10px solid #eeeeee;
+    border-radius: 50%;
+    border-left: 10px solid #27BBAE;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
