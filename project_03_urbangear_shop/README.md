@@ -124,8 +124,19 @@ Ensure you have Node.js installed on your computer.
 
 2. Navigate to the project directory: **`cd frontend-portfolio`** and then **`cd project_03_urbangear_shop`**
 
-3. Install dependencies: **`npm install`**
+3. Before running the application, you need to set up the necessary environment variables:
 
-4. To run the application locally, execute **`npm run dev`**. This will launch the application in development mode.
+- Copy the **`.env.example`** file to a new file named **`.env`** in the root directory: **`cp .env.example .env`**
 
-5. Open http://localhost:3000/ to view it in the browser.
+- Open the **`.env`** file and replace the placeholders with your actual configuration details:
+
+  - **`user:<password>`**: Replace **`<password>`** with your database user password
+  - **`<cluster-url>`**: Replace this with your MongoDB cluster URL
+  - **`<dbname>`**: Replace this with the name of your MongoDB database
+  - **`<app-name>`**: Optionally, replace this with your application name as registered in MongoDB
+
+4. Install dependencies: **`npm install`**
+
+5. To run the application locally, execute **`npm run dev`**. This will launch the application in development mode.
+
+6. Open http://localhost:3000/ (or whichever port you have configured) to view it in the browser.
