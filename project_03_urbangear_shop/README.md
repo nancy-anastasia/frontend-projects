@@ -140,3 +140,7 @@ Ensure you have Node.js installed on your computer.
 5. To run the application locally, execute **`npm run dev`**. This will launch the application in development mode.
 
 6. Open http://localhost:3000/ (or whichever port you have configured) to view it in the browser.
+
+#### Data Import
+
+To import or seed data into your database, run: **`npm run data/import`**
