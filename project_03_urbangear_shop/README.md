@@ -52,65 +52,61 @@ Enjoy smooth navigation on tablet and mobile devices with a sliding navigation d
 
 - Animation of product cards on hover
 
-<img src="./images/homepage-animation.gif" alt="GIF of the product grid animation" style="max-width: 700px; height: auto; padding-bottom: 20px;">
+![GIF of the product grid animation](./images/homepage-animated-grid.gif "GIF of the product grid animation")
 
 - Homepage displayed on a desktop screen
 
-![Screenshot of UrbanGear Shop's homepage](./images/homepage-desktop-view.jpeg "Screenshot of UrbanGear Shop's homepage")
+![Screenshot of UrbanGear Shop's homepage](./images/homepage-desktop-view.png "Screenshot of UrbanGear Shop's homepage")
 
 - The desktop view of the homepage with a product card in focus
 
-![Screenshot of UrbanGear Shop's homepage with a product card in focus](./images/homepage-desktop-view-hover.jpeg "Screenshot of UrbanGear Shop's homepage with a product card in focus")
+![Screenshot of UrbanGear Shop's homepage with a product card in focus](./images/homepage-desktop-view-hover.png "Screenshot of UrbanGear Shop's homepage with a product card in focus")
 
 - A preview of the homepage on a tablet
 
-<img src="./images/homepage-tablet-view.png" alt="Screenshot of UrbanGear Shop's homepage on a tablet" style="max-width: 400px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's homepage on a tablet](./images/homepage-tablet-view.png "Screenshot of UrbanGear Shop's homepage on a tablet")
 
 - A preview of the homepage on a phone
 
-<img src="./images/homepage-phone-view.jpeg" alt="Screenshot of UrbanGear Shop's homepage on a phone" style="max-width: 250px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's homepage on a phone](./images/homepage-mobile-view.png "Screenshot of UrbanGear Shop's homepage on a phone")
 
 ### 2. Product Page
 
 - A product overview of a product in stock
 
-![Screenshot of UrbanGear Shop's product page for a product in stock](./images/product-page-desktop-in-stock.jpeg "Screenshot of UrbanGear Shop's product page for a product in stock")
+![Screenshot of UrbanGear Shop's product page for a product in stock](./images/product-page-desktop-in-stock.png "Screenshot of UrbanGear Shop's product page for a product in stock")
 
 - A product overview of a product out of stock
 
-![Screenshot of UrbanGear Shop's product page for a product out of stock](./images/product-page-desktop-out-of-stock.jpeg "Screenshot of UrbanGear Shop's product page for a product out of stock")
+![Screenshot of UrbanGear Shop's product page for a product out of stock](./images/product-page-desktop-out-of-stock.png "Screenshot of UrbanGear Shop's product page for a product out of stock")
 
 - A product overview on a tablet
 
-<img src="./images/product-page-tablet-view.png" alt="Screenshot of UrbanGear Shop's product page on a tablet" style="max-width: 400px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's product page on a tablet](./images/product-page-tablet-view.png "Screenshot of UrbanGear Shop's product page on a tablet")
 
 - A product overview on a phone
 
-<img src="./images/product-page-mobile-in-stock.png" alt="Screenshot of UrbanGear Shop's product page on a phone" style="max-width: 250px; height: auto; padding-bottom: 20px; padding-right: 10px;">
-
-<img src="./images/product-page-mobile-in-stock-2.png" alt="Screenshot of UrbanGear Shop's product page on a phone" style="max-width: 250px; height: auto; padding-bottom: 20px; padding-right: 10px;">
-
-<img src="./images/product-page-mobile-out-of-stock.png" alt="Screenshot of UrbanGear Shop's product page on a phone" style="max-width: 250px; height: auto; padding-bottom: 20px;">
+![Screenshots of UrbanGear Shop's product page on a phone](./images/product-page-mobile-view.png "Screenshots of UrbanGear Shop's product page on a phone")
 
 ### 3. Shopping Cart
 
 - The desktop view of the shopping cart
 
-![Screenshot of UrbanGear Shop's shopping cart on a desktop](./images/shopping-cart-desktop-view.jpeg "Screenshot of UrbanGear Shop's shopping cart on a desktop")
+![Screenshot of UrbanGear Shop's shopping cart on a desktop](./images/shopping-cart-desktop-view.png "Screenshot of UrbanGear Shop's shopping cart on a desktop")
 
 - A shopping cart overview on a tablet
 
-<img src="./images/shopping-cart-tablet-view.png" alt="Screenshot of UrbanGear Shop's shopping cart on a tablet" style="max-width: 400px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's shopping cart on a tablet](./images/shopping-cart-tablet-view.png "Screenshot of UrbanGear Shop's shopping cart on a tablet")
 
 - A shopping cart overview on a phone
 
-<img src="./images/shopping-cart-phone-view.png" alt="Screenshot of UrbanGear Shop's shopping cart on a phone" style="max-width: 250px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's shopping cart on a phone](./images/shopping-cart-mobile-view.png "Screenshot of UrbanGear Shop's shopping cart on a phone")
 
 ### 4. Navigation Drawer
 
 - Navigation drawer on mobile devices
 
-<img src="./images/navigation-drawer-mobile.png" alt="Screenshot of UrbanGear Shop's navigation drawer" style="max-width: 250px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's navigation drawer](./images/navdrawer-mobile-view.png "Screenshot of UrbanGear Shop's navigation drawer")
 
 ## To Run UrbanGear Shop Locally
 
