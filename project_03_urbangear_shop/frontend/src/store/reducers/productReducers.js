@@ -26,6 +26,7 @@ export const getProductsReducer = (
       return {
         loading: false,
         error: action.payload,
+        products: [],
       };
     default:
       return state;

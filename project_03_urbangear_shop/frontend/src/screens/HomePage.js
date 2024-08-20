@@ -34,7 +34,7 @@ const HomePage = () => {
         ) : error ? (
           // Display error message if there is an error fetching products
           <p>{error}</p>
-        ) : (
+        ) : Array.isArray(products) && products.length !== 0 ? (
           // Render a list of ProductCards if data is successfully fetched
           products.map((product) => (
             <ProductCard
@@ -46,6 +46,8 @@ const HomePage = () => {
               productPrice={product.price}
             />
           ))
+        ) : (
+          <p>No products available</p>
         )}
       </div>
     </div>

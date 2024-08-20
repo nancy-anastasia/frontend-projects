@@ -135,11 +135,13 @@ Ensure you have Node.js installed on your computer.
   - **`<dbname>`**: Replace this with the name of your MongoDB database
   - **`<app-name>`**: Optionally, replace this with your application name as registered in MongoDB
 
-4. Install dependencies: **`npm install`**
+4. Install dependencies in the project root directory: **`npm install`**.
 
-5. To run the application locally, execute **`npm run dev`**. This will launch the application in development mode.
+5. Navigate to the frontend directory of the project: **`cd frontend`**. Install frontend dependencies by running **`npm install`** in this directory, then navigate back to **`project_03_urbangear_shop`** directory: **`cd ..`**
 
-6. Open http://localhost:3000/ (or whichever port you have configured) to view it in the browser.
+6. To run the application locally, execute **`npm run dev`** in the root directory. This will launch the application in development mode.
+
+7. Open http://localhost:3000/ (or whichever port you have configured) to view it in the browser.
 
 #### Data Import
 
