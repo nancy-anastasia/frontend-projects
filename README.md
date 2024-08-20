@@ -63,7 +63,7 @@ Checking correctness and displaying statistics:
 
 ### 3. UrbanGear Shop
 
-Deployed Project: (link)
+Deployed Project: [https://urbangear-shop-frontend.vercel.app/](https://urbangear-shop-frontend.vercel.app/)
 
 **Technologies Used:**
 
