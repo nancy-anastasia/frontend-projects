@@ -46,7 +46,7 @@ Enjoy smooth navigation on tablet and mobile devices with a sliding navigation d
 
 ## Deployed Project
 
-**The deployed project can be accessed via this link:** (link)
+**The deployed project can be accessed via this link:** [https://urbangear-shop-frontend.vercel.app/](https://urbangear-shop-frontend.vercel.app/)
 
 ### 1. Homepage with Product Grid
 
