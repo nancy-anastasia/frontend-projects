@@ -91,65 +91,61 @@ UrbanGear Shop is a modern web application that functions as an intuitive online
 
 - Animation of product cards on hover
 
-<img src="./project_03_urbangear_shop/images/homepage-animation.gif" alt="GIF of the product grid animation" style="max-width: 700px; height: auto; padding-bottom: 20px;">
+![GIF of the product grid animation](./project_03_urbangear_shop/images/homepage-animated-grid.gif "GIF of the product grid animation")
 
 - Homepage displayed on a desktop screen
 
-![Screenshot of UrbanGear Shop's homepage](./project_03_urbangear_shop/images/homepage-desktop-view.jpeg "Screenshot of UrbanGear Shop's homepage")
+![Screenshot of UrbanGear Shop's homepage](./project_03_urbangear_shop/images/homepage-desktop-view.png "Screenshot of UrbanGear Shop's homepage")
 
 - The desktop view of the homepage with a product card in focus
 
-![Screenshot of UrbanGear Shop's homepage with a product card in focus](./project_03_urbangear_shop/images/homepage-desktop-view-hover.jpeg "Screenshot of UrbanGear Shop's homepage with a product card in focus")
+![Screenshot of UrbanGear Shop's homepage with a product card in focus](./project_03_urbangear_shop/images/homepage-desktop-view-hover.png "Screenshot of UrbanGear Shop's homepage with a product card in focus")
 
 - A preview of the homepage on a tablet
 
-<img src="./project_03_urbangear_shop/images/homepage-tablet-view.png" alt="Screenshot of UrbanGear Shop's homepage on a tablet" style="max-width: 400px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's homepage on a tablet](./project_03_urbangear_shop/images/homepage-tablet-view.png "Screenshot of UrbanGear Shop's homepage on a tablet")
 
 - A preview of the homepage on a phone
 
-<img src="./project_03_urbangear_shop/images/homepage-phone-view.jpeg" alt="Screenshot of UrbanGear Shop's homepage on a phone" style="max-width: 250px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's homepage on a phone](./project_03_urbangear_shop/images/homepage-mobile-view.png "Screenshot of UrbanGear Shop's homepage on a phone")
 
 #### 2. Product Page
 
 - A product overview of a product in stock
 
-![Screenshot of UrbanGear Shop's product page for a product in stock](./project_03_urbangear_shop/images/product-page-desktop-in-stock.jpeg "Screenshot of UrbanGear Shop's product page for a product in stock")
+![Screenshot of UrbanGear Shop's product page for a product in stock](./project_03_urbangear_shop/images/product-page-desktop-in-stock.png "Screenshot of UrbanGear Shop's product page for a product in stock")
 
 - A product overview of a product out of stock
 
-![Screenshot of UrbanGear Shop's product page for a product out of stock](./project_03_urbangear_shop/images/product-page-desktop-out-of-stock.jpeg "Screenshot of UrbanGear Shop's product page for a product out of stock")
+![Screenshot of UrbanGear Shop's product page for a product out of stock](./project_03_urbangear_shop/images/product-page-desktop-out-of-stock.png "Screenshot of UrbanGear Shop's product page for a product out of stock")
 
 - A product overview on a tablet
 
-<img src="./project_03_urbangear_shop/images/product-page-tablet-view.png" alt="Screenshot of UrbanGear Shop's product page on a tablet" style="max-width: 400px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's product page on a tablet](./project_03_urbangear_shop/images/product-page-tablet-view.png "Screenshot of UrbanGear Shop's product page on a tablet")
 
 - A product overview on a phone
 
-<img src="./project_03_urbangear_shop/images/product-page-mobile-in-stock.png" alt="Screenshot of UrbanGear Shop's product page on a phone" style="max-width: 250px; height: auto; padding-bottom: 20px; padding-right: 10px;">
-
-<img src="./project_03_urbangear_shop/images/product-page-mobile-in-stock-2.png" alt="Screenshot of UrbanGear Shop's product page on a phone" style="max-width: 250px; height: auto; padding-bottom: 20px; padding-right: 10px;">
-
-<img src="./project_03_urbangear_shop/images/product-page-mobile-out-of-stock.png" alt="Screenshot of UrbanGear Shop's product page on a phone" style="max-width: 250px; height: auto; padding-bottom: 20px;">
+![Screenshots of UrbanGear Shop's product page on a phone](./project_03_urbangear_shop/images/product-page-mobile-view.png "Screenshots of UrbanGear Shop's product page on a phone")
 
 #### 3. Shopping Cart
 
 - The desktop view of the shopping cart
 
-![Screenshot of UrbanGear Shop's shopping cart on a desktop](./project_03_urbangear_shop/images/shopping-cart-desktop-view.jpeg "Screenshot of UrbanGear Shop's shopping cart on a desktop")
+![Screenshot of UrbanGear Shop's shopping cart on a desktop](./project_03_urbangear_shop/images/shopping-cart-desktop-view.png "Screenshot of UrbanGear Shop's shopping cart on a desktop")
 
 - A shopping cart overview on a tablet
 
-<img src="./project_03_urbangear_shop/images/shopping-cart-tablet-view.png" alt="Screenshot of UrbanGear Shop's shopping cart on a tablet" style="max-width: 400px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's shopping cart on a tablet](./project_03_urbangear_shop/images/shopping-cart-tablet-view.png "Screenshot of UrbanGear Shop's shopping cart on a tablet")
 
 - A shopping cart overview on a phone
 
-<img src="./project_03_urbangear_shop/images/shopping-cart-phone-view.png" alt="Screenshot of UrbanGear Shop's shopping cart on a phone" style="max-width: 250px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's shopping cart on a phone](./project_03_urbangear_shop/images/shopping-cart-mobile-view.png "Screenshot of UrbanGear Shop's shopping cart on a phone")
 
 #### 4. Navigation Drawer
 
 - Navigation drawer on mobile devices
 
-<img src="./project_03_urbangear_shop/images/navigation-drawer-mobile.png" alt="Screenshot of UrbanGear Shop's navigation drawer" style="max-width: 250px; height: auto; padding-bottom: 20px;">
+![Screenshot of UrbanGear Shop's navigation drawer](./project_03_urbangear_shop/images/navdrawer-mobile-view.png "Screenshot of UrbanGear Shop's navigation drawer")
 
 ## To run the projects locally
 
