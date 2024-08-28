@@ -46,7 +46,7 @@ const CartView = () => {
   const handleRemoveFromCart = (productId: string) => {
     dispatch(removeFromCart(productId));
     // Filter cart items to remove the specified item by productId
-    cartItems.filter((item) => item.cartItemId !== productId);
+    cartItems.filter((item: CartItemBase) => item.cartItemId !== productId);
   };
 
   return (
