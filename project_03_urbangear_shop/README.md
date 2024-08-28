@@ -36,11 +36,13 @@ Enjoy smooth navigation on tablet and mobile devices with a sliding navigation d
 
 ## Technologies
 
-- **React (JSX):** Utilized for building a dynamic and interactive user interface with a component-based architecture, ensuring seamless user experiences.
+- **React with TypeScript:** Utilized for building a dynamic, interactive user interface with a component-based architecture, ensuring type safety and seamless user experiences.
 - **React Router:** Implemented to manage in-app navigation, providing smooth transitions and deep linking between pages.
-- **React Redux v6:** Employed to manage the global state of the application, ensuring consistent data flow across components.
+- **React Redux:** Employed to manage the global state of the application, ensuring consistent data flow across components.
 - **Redux Toolkit:** Integrated to simplify the setup and management of Redux state, improving code efficiency and maintainability.
 - **Node.js (Express.js):** Used for building the backend API, handling server-side logic, and managing requests efficiently.
+- **MongoDB:** Utilized as the primary database for storing and managing application data. It integrates seamlessly with Node.js, providing a robust backend solution for the application's data needs.
+- **Vite:** Employed as the build tool and development environment for the frontend. It simplifies the setup of the project and enhances the overall developer experience when working with React and TypeScript.
 - **CSS:** Applied for custom styling, ensuring a visually appealing and responsive design across all devices.
 - **Font Awesome Icons:** Incorporated to enhance the UI with a wide range of scalable vector icons, adding visual clarity and emphasis to key elements.
 
