@@ -4,7 +4,7 @@
 
 Welcome to my Frontend Portfolio Repository!
 
-This repository serves as a showcase of my skills and capabilities in frontend development, featuring three distinct projects that demonstrate my proficiency with modern web technologies. Each project within this portfolio is built with a focus on responsive design, user experience, and leveraging the full potential of **React**, **TypeScript**, **JavaScript**, **React Router**, **Redux**, **Redux Toolkit**, **Node.js (Express.js)**, **MongoDB**, **API**, **CSS** and **Chakra UI** among other tools.
+This repository serves as a showcase of my skills and capabilities in frontend development, featuring three distinct projects that demonstrate my proficiency with modern web technologies. Each project within this portfolio is built with a focus on responsive design, user experience, and leveraging the full potential of **React**, **TypeScript**, **JavaScript**, **React Router**, **Redux**, **Redux Toolkit**, **Node.js (Express.js)**, **MongoDB**, **RESTful APIs**, **CSS** and **Chakra UI** among other tools.
 
 **Gamepedia** is a dynamic game catalog leveraging the rawg.io API to provide real-time data on a vast array of video games, highlighting my skills in API integration and responsive UI design.
 
@@ -25,7 +25,7 @@ Deployed Project: [https://gamepedia-five.vercel.app/](https://gamepedia-five.ve
 - React
 - TypeScript
 - Chakra UI
-- rawg.io API
+- RESTful APIs
 
 Gamepedia is a dynamic web application that serves as a comprehensive catalog for video games, allowing users to sort and filter games by various criteria and access detailed information fetched from the rawg.io API.
 
@@ -73,6 +73,7 @@ Deployed Project: [https://urbangear-shop-frontend.vercel.app/](https://urbangea
 - Redux Toolkit
 - Node.js (Express.js)
 - MongoDB
+- RESTful APIs
 - Vite
 - CSS
 - Font Awesome Icons
