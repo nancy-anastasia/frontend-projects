@@ -74,7 +74,7 @@ const products = [
   {
     name: "SnapShot Digital Camera",
     imageUrl:
-      "https://images.unsplash.com/photo-1612232099404-0ca09938afac?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1484204561501-66a004fa8cac?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "Capture stunning photos and videos with the SnapShot Digital Camera. Featuring a 24.1-megapixel sensor, 4K video recording, and a wide range of manual controls, this camera is perfect for both beginners and advanced photographers. The compact and lightweight design makes it easy to take on your adventures, while the built-in Wi-Fi allows for quick and easy sharing of your favorite moments.",
     price: 499.99,
