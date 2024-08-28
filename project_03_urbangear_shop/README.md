@@ -135,11 +135,11 @@ Ensure you have Node.js installed on your computer.
 
 4. Install dependencies in the project root directory: **`npm install`**.
 
-5. Navigate to the frontend directory of the project: **`cd frontend`**. Install frontend dependencies by running **`npm install`** in this directory, then navigate back to **`project_03_urbangear_shop`** directory: **`cd ..`**
+5. Navigate to the frontend directory of the project: **`cd frontend`**. Install frontend dependencies by running **`npm install`** (optinally **`npm install --legacy-peer-deps`**) in this directory, then navigate back to **`project_03_urbangear_shop`** directory: **`cd ..`**
 
-6. To run the application locally, execute **`npm run dev`** in the root directory. This will launch the application in development mode.
+6. To run the application locally, execute **`npm run dev`** in the root directory **`project_03_urbangear_shop`**. This will launch the application in development mode.
 
-7. Open http://localhost:3000/ (or whichever port you have configured) to view it in the browser.
+7. Open http://localhost:5173/ (or whichever port you have configured) to view it in the browser.
 
 #### Data Import
 
