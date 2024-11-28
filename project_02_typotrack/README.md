@@ -44,9 +44,9 @@ Checking correctness and displaying statistics:
 
 **Setup**
 
-1. Clone the repository: **`git clone https://github.com/nancy-anastasia/frontend-portfolio.git`**
+1. Clone the repository: **`git clone https://github.com/nancy-anastasia/frontend-projects.git`**
 
-2. Navigate to the project directory: **`cd frontend-portfolio`** and then **`cd project_02_typotrack`**
+2. Navigate to the project directory: **`cd frontend-projects`** and then **`cd project_02_typotrack`**
 
 3. Open the **`index.html`** file in your browser to start the application.
 
