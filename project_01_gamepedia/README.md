@@ -51,9 +51,9 @@ Ensure you have Node.js installed on your computer.
 
 ### Installation
 
-1. Clone the repository: **`git clone https://github.com/nancy-anastasia/frontend-portfolio.git`**
+1. Clone the repository: **`git clone https://github.com/nancy-anastasia/frontend-projects.git`**
 
-2. Navigate to the project directory: **`cd frontend-portfolio`** and then **`cd project_01_gamepedia`**
+2. Navigate to the project directory: **`cd frontend-projects`** and then **`cd project_01_gamepedia`**
 
 3. Install dependencies: **`npm install`**
 
