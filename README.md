@@ -1,10 +1,10 @@
-# Frontend Portfolio
+# Frontend Projects
 
 ## Introduction
 
-Welcome to my Frontend Portfolio Repository!
+Welcome to my Frontend Projects Repository!
 
-This repository serves as a showcase of my skills and capabilities in frontend development, featuring three distinct projects that demonstrate my proficiency with modern web technologies. Projects within this portfolio are built with a focus on responsive design, user experience, and leveraging the full potential of **React**, **TypeScript**, **JavaScript**, **React Router**, **Redux**, **Redux Toolkit**, **Node.js (Express.js)**, **MongoDB**, **RESTful APIs**, **CSS** and **Chakra UI** among other tools.
+This repository serves as a showcase of my skills and capabilities in frontend development, featuring three distinct projects that demonstrate my proficiency with modern web technologies. These projects are built with a focus on responsive design, user experience, and leveraging the full potential of **React**, **TypeScript**, **JavaScript**, **React Router**, **Redux**, **Redux Toolkit**, **Node.js (Express.js)**, **MongoDB**, **RESTful APIs**, **CSS** and **Chakra UI** among other tools.
 
 **Gamepedia** is a dynamic game catalog leveraging the rawg.io API to provide real-time data on a vast array of video games, highlighting my skills in API integration and responsive UI design.
 
@@ -152,24 +152,24 @@ UrbanGear Shop is a modern web application that functions as an intuitive online
 
 ## To run the projects locally
 
-To explore and run the projects in this portfolio locally, follow these general steps:
+To explore and run the projects locally, follow these general steps:
 
 1. First, clone this repository to your local machine using the following command:
 
-   **`git clone https://github.com/nancy-anastasia/frontend-portfolio.git`**
+   **`git clone https://github.com/nancy-anastasia/frontend-projects.git`**
 
 2. Navigate to the Project Directory
 
 - For "Gamepedia":
 
-  **`cd frontend-portfolio`** and then **`cd project_01_gamepedia`**
+  **`cd frontend-projects`** and then **`cd project_01_gamepedia`**
 
 - For "TypoTrack":
 
-  **`cd frontend-portfolio`** and then **`cd project_02_typotrack`**
+  **`cd frontend-projects`** and then **`cd project_02_typotrack`**
 
 - For "UrbanGear Shop":
 
-  **`cd frontend-portfolio`** and then **`cd project_03_urbangear_shop`**
+  **`cd frontend-projects`** and then **`cd project_03_urbangear_shop`**
 
 3. Follow the instructions in the README files for corresponding projects.
